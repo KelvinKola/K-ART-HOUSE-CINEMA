@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Art House Cinema - Profile</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-2">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="img/website-logo.png" alt="K-Art House Cinema Logo" class="logo">
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Feed</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="movies.html">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="authors.html">Authors</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container mt-4">
+        <section>
+            <h2>User Profile</h2>
+            <p><strong>Username:</strong> JohnDoe</p>
+            <p><strong>Email:</strong> johndoe@example.com</p>
+            <button class="btn btn-danger mb-3" onclick="logout()">Logout</button>
+        </section>
+        <section>
+            <h3>Uploaded Comments</h3>
+            <ul>
+                <li>Great movie! Really enjoyed it. - Movie: Memories of Murder</li>
+                <li>A bit slow, but the ending was worth it. - Movie: Spring, Summer, Fall, Winter... and Spring</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Liked Movies</h3>
+            <ul>
+                <li>Parasite</li>
+                <li>Oldboy</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center py-2">
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

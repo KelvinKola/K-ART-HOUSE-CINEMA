@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Art House Cinema - Feed</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-2">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="img/website-logo.png" alt="K-Art House Cinema Logo" class="logo">
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Feed</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="movies.html">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="authors.html">Authors</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+            <form class="form-inline" onsubmit="return searchMovies()">
+                <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+    <main class="container mt-4" id="movie-feed">
+        <div class="movie">
+            <h2>Spring Summer Fall Winter... and Spring</h2>
+            <img src="img/kim-ki-duk-spring-1.jpg" alt="Spring Summer Fall Winter... and Spring" class="img-fluid mb-3">
+            <p>Directed by: Kim Ki-duk</p>
+            <p>Release date: 19 September 2003</p>
+            <p>Box office: $9.53 million</p>
+            <p>Comments:</p>
+            <ul>
+                <li>Great movie! Really enjoyed it. <button>👍</button> 10 <button>👎</button> 2</li>
+                <li>A bit slow, but the ending was worth it. <button>👍</button> 5 <button>👎</button> 1</li>
+            </ul>
+        </div>
+        <div class="movie">
+            <h2>Memories of Murder</h2>
+            <img src="img/bong-joon-ho-memories.jpg" alt="Memories of Murder" class="img-fluid mb-3">
+            <p>Directed by: Bong Joon-ho</p>
+            <p>Release date: 2 May 2003</p>
+            <p>Box office: $20.1 million</p>
+            <p>Comments:</p>
+            <ul>
+                <li>Incredible storytelling and performances. <button>👍</button> 12 <button>👎</button> 3</li>
+                <li>Dark, gripping, and unforgettable. <button>👍</button> 8 <button>👎</button> 2</li>
+            </ul>
+        </div>
+        <!-- Add more movie divs as needed -->
+    </main>
+    <footer class="bg-dark text-white text-center py-2">
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
