@@ -1,22 +1,29 @@
 # K-Art House Cinema
 
-This website is a small encyclopedia dedicated to Korean Art-House Cinema. It allows fans to find new movies, read and leave opinions on each film.
+Questo sito web è una piccola enciclopedia dedicata al Art-House Cinema Koreano. Permette ai fan di scoprire nuovi film, leggere e lasciare opinioni su ogni film.
 
-## Structure
+## Struttura
 
-- `index.html`: Main page displaying the feed.
-- `catalogo.html`: Catalog page displaying the list of movies and authors.
-- `img/`: Folder containing images used in the website.
-- `style/`: Folder containing the CSS styles for the website.
+- `index.html`: Pagina principale che visualizza il feed.
+- `catalogo`: Diviso due pagine html nelle quali si può consultare l'elenco dei film e degli autori.
+- `img/`: Cartella contenente le immagini utilizzate nel sito web.
+- `style/`: Cartella contenente gli stili CSS per il sito web.
+- `java/`: File in cui saranno scritte le funzioni perchè il sito renda in modo corretto.
 
-## Pages
+## Pagine
 
 ### Index (Feed)
-The feed page (`index.html`) displays recent movies and user comments.
+La pagina del feed (`index.html`) visualizza i film recenti e i commenti degli utenti.
 
-### Catalog
-The catalog page (`catalogo.html`) lists movies and authors with their respective details.
+### Film
+La pagina del catalogo dei film (`film.html`) elenca i film con i rispettivi dettagli.
 
-## Instructions
+### Autori
+La pagina degli autori (`autori.html`) elenca gli autori con i rispettivi dettagli.
 
-To view the website, simply open `index.html` or `catalogo.html` in a web browser.
+### Profilo
+La pagina dell'utente (`profilo.html`) l'utente potra consultare le sue interazioni con il sito: commenti, mi piace etc....
+
+## Istruzioni
+
+Per visualizzare il sito web, basta aprire `index.html` in un browser web.
