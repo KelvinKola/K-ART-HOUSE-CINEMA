@@ -164,12 +164,21 @@ h2 {
     align-items: flex-start;
     margin-top: 20px;
 }
-.movie-image {
-    margin-right: 20px;
+.movie-image img {
+    max-width: 100%; /* Assicura che l'immagine non superi la larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    width: 300px; /* Imposta una nuova larghezza per ingrandire l'immagine */
+    padding-right: 20px;
+    padding-bottom: 30px;
 }
+
 .movie-description {
     max-width: 600px;
     text-align: left; /* Allinea il testo a sinistra */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 .movie-description h2 {
     font-size: 24px; /* Dimensione del titolo */
@@ -177,11 +186,7 @@ h2 {
     padding-left: 0; /* Rimuove qualsiasi padding a sinistra */
     text-align: left; /* Allinea il testo a sinistra */
 }
-.movie-description p {
-    margin: 0 0 10px;
+.movie-description button {
+    margin-top: auto; /* Spinge il bottone in basso */
+    align-self: flex-start; /* Allinea il bottone a sinistra (opzionale) */
 }
-.movie-image button {
-    display: block;
-    margin: 10px auto 0 auto; /* Margine superiore per distanziare il bottone dall'immagine */
-}
-
