@@ -1,79 +1,4 @@
-const movies = {
-    'spring-summer-fall-winter-spring': {
-        title: 'Spring Summer Fall Winter... and Spring',
-        img: 'img/kim-ki-duk-spring-1.jpg',
-        director: 'Kim Ki-duk',
-        releaseDate: '19 September 2003',
-        boxOffice: '$9.53 million'
-    },
-    '3-iron': {
-        title: '3-Iron',
-        img: 'img/kim-ki-duk-3-iron.jpg',
-        director: 'Kim Ki-duk',
-        releaseDate: '15 October 2004',
-        boxOffice: '$0.3 million'
-    },
-    'oldboy': {
-        title: 'Oldboy',
-        img: 'img/park-chan-wook-oldboy.jpg',
-        director: 'Park Chan-wook',
-        releaseDate: '21 November 2003',
-        boxOffice: '$15 million'
-    },
-    'parasite': {
-        title: 'Parasite',
-        img: 'img/bong-joon-ho-parasite.jpg',
-        director: 'Bong Joon-ho',
-        releaseDate: '30 May 2019',
-        boxOffice: '$258 million'
-    },
-    'memories-of-murder': {
-        title: 'Memories of Murder',
-        img: 'img/bong-joon-ho-memories.jpg',
-        director: 'Bong Joon-ho',
-        releaseDate: '2 May 2003',
-        boxOffice: '$20.1 million'
-    },
-    'pieta': {
-        title: 'Pietà',
-        img: 'img/kim-ki-duk-pieta.jpg',
-        director: 'Kim Ki-duk',
-        releaseDate: '6 September 2012',
-        boxOffice: '$0.32 million'
-    },
-    'im-a-cyborg-but-thats-ok': {
-        title: 'I\'m a Cyborg, But That\'s OK',
-        img: 'img/park-chan-wook-cyborg.jpg',
-        director: 'Park Chan-wook',
-        releaseDate: '7 December 2006',
-        boxOffice: '$3.8 million'
-    },
-    'the-handmaiden': {
-        title: 'The Handmaiden',
-        img: 'img/park-chan-wook-handmaiden.jpg',
-        director: 'Park Chan-wook',
-        releaseDate: '1 June 2016',
-        boxOffice: '$38.6 million'
-    }
-};
-
-const authors = {
-    'kim-ki-duk': {
-        name: 'Kim Ki-duk',
-        img: 'img/kim-ki-duk.jpg',
-        works: ['Spring Summer Fall Winter... and Spring', '3-Iron', 'Pietà']
-    },
-    'park-chan-wook': {
-        name: 'Park Chan-wook',
-        img: 'img/park-chan-wook.jpg',
-        works: ['Oldboy', 'I\'m a Cyborg, But That\'s OK', 'The Handmaiden']
-    },
-    'bong-joon-ho': {
-        name: 'Bong Joon-ho',
-        img: 'img/bong-joon-ho.jpg',
-        works: ['Memories of Murder', 'The Host', 'Snowpiercer']
-    }
-};
+/*FUNZIONE CERCA FEED*/
 
 function searchMovies() {
     const query = document.getElementById('search-bar').value.toLowerCase();
@@ -89,10 +14,14 @@ function searchMovies() {
     return false; // Prevent form submission
 }
 
+/*FUNZIONE CERCA CATALOGO*/
+
 function searchCatalog() {
     const query = document.getElementById('search-bar').value.toLowerCase();
-    const rows = document.querySelectorAll('#movie-list tr');
-    rows.forEach(row => {
+
+    // Cerca tra i film
+    const movieRows = document.querySelectorAll('#movie-list tr');
+    movieRows.forEach(row => {
         const title = row.querySelector('td:first-child a').textContent.toLowerCase();
         if (title.includes(query)) {
             row.style.display = '';
@@ -100,66 +29,173 @@ function searchCatalog() {
             row.style.display = 'none';
         }
     });
+
+    // Cerca tra gli autori
+    const authorRows = document.querySelectorAll('#author-list tbody tr');
+    authorRows.forEach(row => {
+        const name = row.querySelector('td:first-child a').textContent.toLowerCase();
+        if (name.includes(query)) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+
     return false; // Prevent form submission
 }
 
+/*FUNZIONE FILTRO PAGINA FILM*/
+
 function filterCatalog() {
-    const author = document.getElementById('author-filter').value;
-    const year = document.getElementById('year-filter').value;
-    const rating = document.getElementById('rating-filter').value;
+    const author = document.getElementById('filtro-autore').value;
+    const year = document.getElementById('filtro-anno').value;
+    const rating = document.getElementById('filtro-classifica').value;
     const rows = document.querySelectorAll('#movie-list tr');
+    
     rows.forEach(row => {
         const rowAuthor = row.querySelector('td:nth-child(2)').textContent;
         const rowYear = row.querySelector('td:nth-child(3)').textContent;
         const rowRating = row.querySelector('td:nth-child(4)').textContent;
         let display = true;
-        if (author && rowAuthor !== author) display = false;
-        if (year && rowYear !== year) display = false;
-        if (rating && rowRating !== rating) display = false;
+
+        if (author && author !== 'Tutti' && rowAuthor !== author) display = false;
+        if (year && year !== 'Tutti' && rowYear !== year) display = false;
+        if (rating && rating !== 'Tutti' && rowRating !== rating) display = false;
+
         row.style.display = display ? '' : 'none';
     });
 }
 
 function viewAll() {
+    document.getElementById('filtro-autore').selectedIndex = 0;
+    document.getElementById('filtro-anno').selectedIndex = 0;
+    document.getElementById('filtro-classifica').selectedIndex = 0;
     const rows = document.querySelectorAll('#movie-list tr');
     rows.forEach(row => row.style.display = '');
+    const allDetails = document.querySelectorAll('.movie-details');
+    allDetails.forEach(detail => detail.style.display = 'none');
+
+    // Mostra la lista dei film
+    const movieList = document.querySelector('.table-responsive');
+    movieList.style.display = ''; 
 }
 
-function showMovieDetails(movieId) {
-    const movie = movies[movieId];
-    document.getElementById('movie-title').textContent = movie.title;
-    document.getElementById('movie-image').src = movie.img;
-    document.getElementById('movie-director').textContent = movie.director;
-    document.getElementById('movie-release-date').textContent = movie.releaseDate;
-    document.getElementById('movie-box-office').textContent = movie.boxOffice;
-    document.getElementById('movie-details').style.display = 'block';
+/*FUNZIONE PER MOSTRARE/NASCONDERE I DETTAGLI DEL FILM*/
+
+function toggleMovieDetails(movieId) {
+    const movieDetails = document.getElementById(movieId);
+    const movieList = document.querySelector('.table-responsive'); // Seleziona la lista dei film
+    
+    // Nascondi o mostra i dettagli del film
+    if (movieDetails.style.display === 'block') {
+        movieDetails.style.display = 'none';
+        movieList.style.display = ''; // Mostra la lista dei film
+    } else {
+        // Nascondi tutti i blocchi di dettagli dei film
+        const allDetails = document.querySelectorAll('.movie-details');
+        allDetails.forEach(detail => detail.style.display = 'none');
+        
+        // Nascondi la lista dei film
+        movieList.style.display = 'none';
+
+        // Mostra solo il blocco di dettagli selezionato
+        movieDetails.style.display = 'block';
+    }
 }
 
-function showAuthorDetails(authorId) {
-    const author = authors[authorId];
-    document.getElementById('author-name').textContent = author.name;
-    document.getElementById('author-image').src = author.img;
-    document.getElementById('author-works').textContent = 'Notable Works: ' + author.works.join(', ');
-    document.getElementById('author-details').style.display = 'block';
-    document.getElementById('author-list').style.display = 'none';
-}
+/*FUNZIONE FILTRO PAGINA AUTORI*/
 
 function filterAuthors() {
-    const authorFilter = document.getElementById('author-filter').value;
+    const author = document.getElementById('author-filter').value;
+    const rating = document.getElementById('rating-filter').value;
     const rows = document.querySelectorAll('#author-list tbody tr');
+    
     rows.forEach(row => {
-        const rowAuthor = row.querySelector('td:first-child a').textContent;
+        const rowAuthor = row.querySelector('td:nth-child(1)').textContent.trim();
+        const rowRating = row.querySelector('td:nth-child(2)').textContent.trim();
         let display = true;
-        if (authorFilter !== 'All' && rowAuthor !== authorFilter) display = false;
+
+        if (author && author !== 'Tutti' && rowAuthor !== author) display = false;
+        if (rating && rating !== 'Tutti' && rowRating !== rating) display = false;
+
         row.style.display = display ? '' : 'none';
     });
 }
 
 function viewAllAuthors() {
+    // Resetta i campi di filtro ai valori predefiniti "Tutti"
+    document.getElementById('author-filter').selectedIndex = 0;
+    document.getElementById('rating-filter').selectedIndex = 0;
+    
+    // Mostra tutte le righe della tabella
     const rows = document.querySelectorAll('#author-list tbody tr');
     rows.forEach(row => row.style.display = '');
+
+    // Nascondi tutti i dettagli degli autori
+    const allDetails = document.querySelectorAll('.author-details');
+    allDetails.forEach(detail => detail.style.display = 'none');
 }
+
+function toggleAuthorDetails(authorId) {
+    const authorDetails = document.getElementById(authorId);
+    
+    // Se il blocco è già visibile, nascondilo
+    if (authorDetails.style.display === 'block') {
+        authorDetails.style.display = 'none';
+    } else {
+        // Nascondi tutti i blocchi di dettagli degli autori
+        const allDetails = document.querySelectorAll('.author-details');
+        allDetails.forEach(detail => detail.style.display = 'none');
+        
+        // Mostra il blocco selezionato
+        authorDetails.style.display = 'block';
+        
+    }
+}
+
+/*FUNZIONE LOGOUT*/
 
 function logout() {
     alert('Logged out');
+}
+
+/*FUNZIONE TASTO DESCRIZIONE*/
+
+function toggleDescription(descriptionId) {
+    var description = document.getElementById(descriptionId);
+    if (description) { // Verifica se l'elemento è stato trovato
+        if (description.style.display === "none" || description.style.display === "") {
+            description.style.display = "block";
+        } else {
+            description.style.display = "none";
+        }
+    } else {
+        console.log("Elemento non trovato: " + descriptionId); // Messaggio di errore per il debugging
+    }
+}
+
+/*FUNZIONE COMMENTI*/
+
+function addComment() {
+    const username = document.getElementById('username').value.trim(); // Ottieni il nome utente
+    const commentText = document.getElementById('comment-text').value.trim(); // Ottieni il testo del commento
+
+    if (commentText !== "" && username !== "") { // Verifica che entrambi i campi non siano vuoti
+        const commentList = document.getElementById('comments-list');
+        const newComment = document.createElement('li');
+        newComment.className = 'list-group-item';
+        newComment.innerHTML = `<strong>${username}:</strong> ${commentText} <span class="badge badge-success">👍 0</span> <span class="badge badge-danger">👎 0</span>`;
+        commentList.appendChild(newComment);
+        document.getElementById('comment-form').reset(); // Reset del form dopo l'invio
+    }
+}
+
+function goBack() {
+    // Nascondi tutti i dettagli dei film
+    const allDetails = document.querySelectorAll('.movie-details');
+    allDetails.forEach(detail => detail.style.display = 'none');
+
+    // Mostra di nuovo la lista dei film
+    const movieList = document.querySelector('.table-responsive');
+    movieList.style.display = '';
 }

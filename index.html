@@ -14,43 +14,169 @@
             <nav>
                 <ul class="nav">
                     <li class="nav-item"><a class="nav-link text-white" href="index.html">Feed</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="movies.html">Movies</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="authors.html">Authors</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="film.html">Film</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="autori.html">Autori</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="profilo.html">Profilo</a></li>
                 </ul>
             </nav>
             <form class="form-inline" onsubmit="return searchMovies()">
                 <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
             </form>
         </div>
     </header>
     <main class="container mt-4" id="movie-feed">
-        <div class="movie">
-            <h2>Spring Summer Fall Winter... and Spring</h2>
-            <img src="img/kim-ki-duk-spring-1.jpg" alt="Spring Summer Fall Winter... and Spring" class="img-fluid mb-3">
-            <p>Directed by: Kim Ki-duk</p>
-            <p>Release date: 19 September 2003</p>
-            <p>Box office: $9.53 million</p>
-            <p>Comments:</p>
-            <ul>
-                <li>Great movie! Really enjoyed it. <button>👍</button> 10 <button>👎</button> 2</li>
-                <li>A bit slow, but the ending was worth it. <button>👍</button> 5 <button>👎</button> 1</li>
-            </ul>
+
+        <div class="movie"> <!--FILM 1-->
+            <h2>Primavera, Estate, Autunno, Inverno... e ancora Primavera</h2>
+            <img src="img/kim-ki-duk-spring-1.jpg" alt="Primavera, Estate, Autunno, Inverno... e ancora Primavera" class="img-fluid mb-3">
+            <p><strong>Regista:</strong> Kim Ki-duk</p>
+            <p><strong>Data di rilascio:</strong> 19 Settembre 2003</p>
+            <p><strong>Incassi:</strong> $9.53 millioni</p>
+            <button class="toggle-button" onclick="toggleDescription('description1')">Mostra Descrizione</button>
+            <div id="description1" class="description-content">
+                <p>"Primavera, Estate, Autunno, Inverno... e ancora Primavera" è un film del 2003 diretto da Kim Ki-duk. È un'opera di grande bellezza visiva e profondità spirituale, ambientata in un tempio buddhista galleggiante su un lago in mezzo alle montagne.</p>
+                <p><strong>Trama: (contiene Spoiler)</strong></p> 
+                <p> Il film è diviso in cinque capitoli, ognuno dei quali corrisponde a una stagione della vita.
+                    <li>Primavera: Un giovane monaco bambino vive con il suo maestro nel tempio galleggiante. Qui impara lezioni di vita e spiritualità, tra cui l'importanza di rispettare tutte le forme di vita.</li> 
+                    <li>Estate: Ormai adolescente, il monaco sperimenta il primo amore quando una giovane ragazza viene al tempio per essere curata. Questo evento segna la sua prima deviazione dal percorso spirituale.</li> 
+                    <li>Autunno: Il monaco, ormai adulto, torna al tempio dopo aver vissuto esperienze dolorose e commesso gravi errori. Affronta il senso di colpa e cerca redenzione attraverso il pentimento. </li> 
+                    <li>Inverno: Ora anziano, il monaco, divenuto maestro, vive da solo nel tempio. Insegna a un nuovo giovane discepolo le stesse lezioni di vita che aveva imparato dal suo maestro.
+                        ...e ancora Primavera: La storia si chiude con un ciclo che si rinnova, suggerendo che la vita e la natura seguono un continuo ciclo di nascita, morte e rinascita.</li> 
+                </p>
+                <p>Il film esplora i temi della crescita spirituale, del ciclo della vita, della natura umana e del karma. Attraverso le stagioni, mostra come il protagonista attraversa l'innocenza, il desiderio, il peccato, la redenzione e infine la saggezza, in un ciclo che si ripete. L'ambiente naturale e la cinematografia minimalista aggiungono una dimensione meditativa all'opera, rendendola un viaggio profondo e contemplativo sulla vita.</p>
+            </div>
+                       
+            <div id="comments-section" class="mt-4"> <!--COMMENTI FILM 1-->
+                <h5>Commenti:</h5>
+                <ul id="comments-list" class="list-group mb-3">
+                    <li class="list-group-item"><strong>Bach83:</strong> Ottimo film! Mi è davvero piaciuto. <span class="badge badge-success">👍 10</span> <span class="badge badge-danger">👎 2</span></li>
+                    <li class="list-group-item"><strong>ArtHC Enjoyer:</strong> Un po' lento, ma ne è valsa la pena. <span class="badge badge-success">👍 5</span> <span class="badge badge-danger">👎 1</span></li>
+                    <li class="list-group-item"><strong>Kelvin Kola:</strong> Bellissimo film, uno dei miei preferiti. <span class="badge badge-success">👍 5</span> <span class="badge badge-danger">👎 1</span></li>
+                </ul>                
+                    
+                <form id="comment-form">
+                    <div class="form-group">
+                        <label for="username">Nome utente:</label>
+                        <input type="text" id="username" class="form-control" placeholder="Inserisci il tuo nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-text">Aggiungi un commento:</label>
+                        <textarea id="comment-text" class="form-control" rows="3" placeholder="Scrivi il tuo commento qui..."></textarea>
+                    </div>
+                    <button type="button" class="toggle-button" onclick="addComment()">Invia Commento</button>
+                </form>                
+            </div>            
+                    
         </div>
-        <div class="movie">
-            <h2>Memories of Murder</h2>
-            <img src="img/bong-joon-ho-memories.jpg" alt="Memories of Murder" class="img-fluid mb-3">
-            <p>Directed by: Bong Joon-ho</p>
-            <p>Release date: 2 May 2003</p>
-            <p>Box office: $20.1 million</p>
-            <p>Comments:</p>
-            <ul>
-                <li>Incredible storytelling and performances. <button>👍</button> 12 <button>👎</button> 3</li>
-                <li>Dark, gripping, and unforgettable. <button>👍</button> 8 <button>👎</button> 2</li>
-            </ul>
+        
+        <div class="movie"> <!--FILM 2-->
+            <h2>Memorie di un assassino</h2>
+            <img src="img/bong-joon-ho-memories.jpg" alt="Memorie di un assassino" class="img-fluid mb-3">
+            <p><strong>Regista:</strong> Bong Joon-ho</p>
+            <p><strong>Data di rilascio:</strong> 2 Maggio 2003</p>
+            <p><strong>Incassi:</strong> $20.1 millioni</p>
+            <button class="toggle-button" onclick="toggleDescription('description2')">Mostra Descrizione</button>
+            <div id="description2" class="description-content">
+                <p>"Memorie di un assassino" è un film del 2003 diretto da Bong Joon-ho. È un thriller poliziesco basato su eventi realmente accaduti in Corea del Sud tra il 1986 e il 1991, riguardanti il primo serial killer della nazione. </p>
+                <p><strong>Trama: (contiene Spoiler)</strong></p>
+                    <p> Il film si svolge in una piccola città rurale della Corea del Sud, dove una serie di omicidi brutali di giovani donne sconvolge la comunità. La polizia locale, guidata dal detective Park Doo-man, è completamente impreparata ad affrontare un caso di tale portata e utilizza metodi di indagine rudimentali, spesso violenti e non scientifici. Park è convinto di poter identificare il colpevole solo guardandolo in faccia. Quando un altro detective, Seo Tae-yoon, arriva dalla città per assistere nelle indagini, si scontra con i metodi primitivi di Park e cerca di adottare un approccio più analitico e moderno. Tuttavia, nonostante gli sforzi, ogni pista sembra finire in un vicolo cieco, e la tensione aumenta man mano che gli omicidi continuano. Il film si addentra nella psicologia dei detective, mostrando la loro crescente frustrazione e disperazione mentre si rendono conto che potrebbero non riuscire mai a catturare il colpevole. Il caso si rivela irrisolvibile e lascia sia i protagonisti che il pubblico con un senso di inquietudine e impotenza.</p>
+                <p>"Memorie di un assassino" è un thriller avvincente e cupo che esplora l'incapacità della polizia di risolvere un caso complesso in un'epoca in cui la Corea del Sud stava ancora sviluppando le sue competenze investigative moderne. Il film combina tensione, critica sociale e un profondo ritratto dei personaggi, lasciando lo spettatore con un senso di angoscia per l'irrisolutezza del caso. È un'opera che mette in luce l'inefficienza e la fallibilità della giustizia in un contesto di transizione, e si distingue per la sua narrazione coinvolgente e la sua atmosfera inquietante.</p>
+            </div>
+
+            <div id="comments-section" class="mt-4"> <!--COMMENTI FILM 2-->
+                <h5>Commenti:</h5>
+                <ul id="comments-list" class="list-group mb-3">
+                    <li class="list-group-item"><strong>XxLenxX:</strong> Narrazione e performance incredibili.. <span class="badge badge-success">👍 12</span> <span class="badge badge-danger">👎 3</span></li>
+                    <li class="list-group-item"><strong>Art1cMoonki:</strong> Cupo, avvincente e indimenticabile. <span class="badge badge-success">👍 8</span> <span class="badge badge-danger">👎 2</span></li>
+                </ul>                
+                    
+                <form id="comment-form">
+                    <div class="form-group">
+                        <label for="username">Nome utente:</label>
+                        <input type="text" id="username" class="form-control" placeholder="Inserisci il tuo nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-text">Aggiungi un commento:</label>
+                        <textarea id="comment-text" class="form-control" rows="3" placeholder="Scrivi il tuo commento qui..."></textarea>
+                    </div>
+                    <button type="button" class="toggle-button" onclick="addComment()">Invia Commento</button>
+                </form>                
+            </div>           
         </div>
-        <!-- Add more movie divs as needed -->
+
+        <div class="movie"> <!--FILM 3-->
+            <h2>Ferro 3</h2>
+            <img src="img/kim-ki-duk-3-iron.jpg" alt="Ferro 3" class="img-fluid mb-3">
+            <p><strong>Regista:</strong> Kim Ki-duk</p>
+            <p><strong>Data di rilascio:</strong> 15 Ottobre 2004</p>
+            <p><strong>Incassi:</strong> $3.4 millioni</p>
+            <button class="toggle-button" onclick="toggleDescription('description3')">Mostra Descrizione</button>
+            <div id="description3" class="description-content">
+                <p>"Ferro 3 - La casa vuota" è un film del 2004 diretto da Kim Ki-duk. È un'opera minimalista e poetica che esplora i temi della solitudine, dell'amore e della comunicazione non verbale.</p>
+                <p><strong>Trama: (contiene Spoiler)</strong></p>
+                    <p>Il protagonista, un giovane uomo di nome Tae-suk, vive una vita insolita: entra nelle case vuote mentre i proprietari sono assenti, non per rubare, ma per viverci temporaneamente. Durante il suo soggiorno, si prende cura delle case, riparando oggetti danneggiati e facendo piccoli lavori di manutenzione. Non lascia tracce del suo passaggio, se non sotto forma di piccoli miglioramenti. Un giorno, entra in una casa che crede vuota, ma scopre che è abitata da una donna, Sun-hwa, vittima di abusi da parte del marito. Senza scambiarsi parole, Tae-suk e Sun-hwa sviluppano una connessione profonda e decidono di fuggire insieme, continuando a vivere nelle case vuote. La loro relazione si basa sul silenzio e su gesti silenziosi, che diventano il loro modo di comunicare. Il film esplora il loro viaggio attraverso queste case vuote, ma la tranquillità è interrotta quando vengono scoperti e Tae-suk viene arrestato. Dopo essere stato rilasciato, Tae-suk ritorna da Sun-hwa, e il loro legame diventa ancora più forte, suggerendo che l'amore e la connessione spirituale possono trascendere le parole e persino la realtà fisica.</p>
+                <p>"Ferro 3 - La casa vuota" è una delicata storia d'amore raccontata attraverso il silenzio e la poesia visiva. Il film esplora l'alienazione e la solitudine dei suoi personaggi, che trovano conforto l'uno nell'altro in modo non convenzionale. Con una narrazione minimalista, Kim Ki-duk utilizza immagini suggestive e un dialogo scarso per evocare emozioni profonde e riflessioni sulla natura dell'amore, della libertà e della comunicazione. Il titolo del film si riferisce al ferro 3, una mazza da golf spesso trascurata, simbolo dei personaggi che vivono ai margini della società.</p>    
+            </div>
+
+            <div id="comments-section" class="mt-4"> <!--COMMENTI FILM 3-->
+                <h5>Commenti:</h5>
+                <ul id="comments-list" class="list-group mb-3">
+                    <li class="list-group-item"><strong>CalcRen2:</strong> I film di Kim Ki-duk sono qualcosa di magico <span class="badge badge-success">👍 30</span> <span class="badge badge-danger">👎 3</span></li>
+                    <li class="list-group-item"><strong>Zephir:</strong> Questo film lascia un bellissimo messaggio <span class="badge badge-success">👍 24</span> <span class="badge badge-danger">👎 2</span></li>
+                </ul>                
+                    
+                <form id="comment-form">
+                    <div class="form-group">
+                        <label for="username">Nome utente:</label>
+                        <input type="text" id="username" class="form-control" placeholder="Inserisci il tuo nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-text">Aggiungi un commento:</label>
+                        <textarea id="comment-text" class="form-control" rows="3" placeholder="Scrivi il tuo commento qui..."></textarea>
+                    </div>
+                    <button type="button" class="toggle-button" onclick="addComment()">Invia Commento</button>
+                </form>                
+            </div>           
+        </div>
+
+        <div class="movie"> <!--FILM 4-->
+            <h2>Parasite</h2>
+            <img src="img/bong-joon-ho-parasite.jpg" alt="Parasite" class="img-fluid mb-3">
+            <p><strong>Regista:</strong> Bong Joon-ho</p>
+            <p><strong>Data di rilascio:</strong> 30 Maggio 2019</p>
+            <p><strong>Incassi:</strong> $258 millioni</p>
+            <button class="toggle-button" onclick="toggleDescription('description4')">Mostra Descrizione</button>
+            <div id="description4" class="description-content">
+                <p>"Parasite" è un film del 2019 diretto da Bong Joon-ho. È una commedia nera che mescola elementi di satira sociale, dramma e thriller, offrendo una critica penetrante sulle disuguaglianze economiche e sociali.</p>
+                <p><strong>Trama: (contiene Spoiler)</strong></p>
+                    <p>Il film segue la famiglia Kim, che vive in un seminterrato umido e malandato, lottando per sbarcare il lunario con lavori temporanei. Quando il figlio maggiore, Ki-woo, riesce a farsi raccomandare per dare ripetizioni di inglese alla figlia adolescente della ricca famiglia Park, inizia a intravedere una possibilità per migliorare le condizioni della sua famiglia. Approfittando della fiducia dei Park, i Kim riescono progressivamente a infiltrarsi nella loro vita, ottenendo vari impieghi presso di loro: la sorella Ki-jung diventa l'insegnante d'arte del figlio minore dei Park, il padre Ki-taek diventa l'autista della famiglia, e la madre Chung-sook viene assunta come governante.I Kim riescono a mantenere la loro vera identità nascosta, presentandosi come individui non collegati tra loro. Tuttavia, il loro piano viene minacciato quando scoprono che la vecchia governante dei Park nasconde un segreto nel seminterrato della lussuosa villa. Da questo punto in poi, la trama prende una svolta drammatica e violenta, esponendo il divario tra le classi sociali e la disperazione dei personaggi.Il climax del film culmina in una serie di eventi tragici che smascherano le tensioni latenti tra le classi e la fragilità delle costruzioni sociali. La storia si conclude in modo inquietante, lasciando i protagonisti e il pubblico con una riflessione amara sulle ingiustizie della società moderna.</p>
+                <p>"Parasite" è una critica tagliente e acuta delle disuguaglianze economiche e sociali, raccontata attraverso una storia che è allo stesso tempo tragicomica e inquietante. Il film esplora la lotta per la sopravvivenza della famiglia Kim e il loro tentativo di ascendere nella scala sociale attraverso l'inganno e la manipolazione. La narrazione è intrisa di simbolismo, con la casa dei Park che rappresenta un microcosmo delle divisioni sociali, e culmina in un finale esplosivo che mette in luce la crudeltà e l'inevitabilità del conflitto tra le classi. Bong Joon-ho utilizza una combinazione di umorismo, tensione e dramma per creare un'opera che ha catturato l'attenzione globale, vincendo numerosi premi, tra cui l'Oscar per il miglior film.</p>    
+            </div>
+
+            <div id="comments-section" class="mt-4"> <!--COMMENTI FILM 4-->
+                <h5>Commenti:</h5>
+                <ul id="comments-list" class="list-group mb-3">
+                    <li class="list-group-item"><strong>Dani3le:</strong> Gran film. Dura e spietata analisi delle differenze tra classi sociali <span class="badge badge-success">👍 140</span> <span class="badge badge-danger">👎 15</span></li>
+                    <li class="list-group-item"><strong>Antoinne4:</strong> Tutto fa di questo lavoro di Joon-ho un film strepitoso. <span class="badge badge-success">👍 57</span> <span class="badge badge-danger">👎 2</span></li>
+                    <li class="list-group-item"><strong>Zach43:</strong> Senza dubbio film dell'anno, nonche' il vincitore della Palma d'oro a Cannes. <span class="badge badge-success">👍 35</span> <span class="badge badge-danger">👎 5</span></li>
+                </ul>                
+                    
+                <form id="comment-form">
+                    <div class="form-group">
+                        <label for="username">Nome utente:</label>
+                        <input type="text" id="username" class="form-control" placeholder="Inserisci il tuo nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-text">Aggiungi un commento:</label>
+                        <textarea id="comment-text" class="form-control" rows="3" placeholder="Scrivi il tuo commento qui..."></textarea>
+                    </div>
+                    <button type="button" class="toggle-button" onclick="addComment()">Invia Commento</button>
+                </form>                
+            </div>           
+        </div>
+
+
     </main>
     <footer class="bg-dark text-white text-center py-2">
         <p>&copy; 2024 All Rights Reserved</p>

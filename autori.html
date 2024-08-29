@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Art House Cinema - Autori</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-2">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="img/website-logo.png" alt="K-Art House Cinema Logo" class="logo">
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Feed</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="film.html">Film</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="autori.html">Autori</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="profilo.html">Profilo</a></li>
+                </ul>
+            </nav>
+            <form class="form-inline" onsubmit="return searchCatalog()">
+                <input id="search-bar" class="form-control mr-sm-2" type="Search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+        </div>
+    </header>
+    <main class="container mt-4">
+        <aside class="col-md-3 float-left">
+            <h4>FILTRO:</h4>
+            <div class="form-group">
+                <label for="author-filter">Autori:</label>
+                <select class="form-control" id="author-filter" onchange="filterAuthors()">
+                    <option value="Tutti">Tutti</option>
+                    <option value="Kim Ki-duk">Kim Ki-duk</option>
+                    <option value="Park Chan-wook">Park Chan-wook</option>
+                    <option value="Bong Joon-ho">Bong Joon-ho</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rating-filter">Valutazione:</label>
+                <select class="form-control" id="rating-filter" onchange="filterAuthors()">
+                    <option value="Tutti">Tutti</option>
+                    <option value="4.5">4.5</option>
+                    <option value="4.7">4.7</option>
+                    <option value="4.8">4.8</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" onclick="filterAuthors()">Filtro</button>
+            <button class="btn btn-secondary" onclick="viewAllAuthors()">Vedi tutti</button>
+        </aside>
+        <section class="col-md-9 float-right">
+            <h2>Autori</h2>
+            <div id="author-details" style="display: none;">
+                <h3 id="author-name"></h3>
+                <img id="author-image" src="" alt="Author Image" style="width: 200px;">
+                <p id="author-works"></p>
+                <button class="btn btn-secondary" onclick="document.getElementById('author-details').style.display='none'; document.getElementById('author-list').style.display='block';">Back to List</button>
+            </div>
+            <table id="author-list" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Valutazione</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#" onclick="toggleAuthorDetails('kim-ki-duk-details')">Kim Ki-duk</a></td>
+                        <td>4.5</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" onclick="toggleAuthorDetails('park-chan-wook-details')">Park Chan-wook</a></td>
+                        <td>4.7</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" onclick="toggleAuthorDetails('bong-joon-ho-details')">Bong Joon-ho</a></td>
+                        <td>4.8</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <!-- Dettagli degli autori -->
+            <div id="kim-ki-duk-details" class="author-details" style="display: none;">
+                <h3>Kim Ki-duk</h3>
+                <img src="img/kim-ki-duk.jpg" alt="Kim Ki-duk" style="width: 200px;">
+                <p>Regista noto per: Primavera, Estate, Autunno, Inverno... e ancora Primavera, Ferro 3, Pietà, etc.</p>
+            </div>
+        
+            <div id="park-chan-wook-details" class="author-details" style="display: none;">
+                <h3>Park Chan-wook</h3>
+                <img src="img/park-chan-wook.jpg" alt="Park Chan-wook" style="width: 200px;">
+                <p>Regista noto per: Oldboy, The Handmaiden, I'm a Cyborg, But That's OK, etc.</p>
+            </div>
+        
+            <div id="bong-joon-ho-details" class="author-details" style="display: none;">
+                <h3>Bong Joon-ho</h3>
+                <img src="img/bong-joon-ho.jpg" alt="Bong Joon-ho" style="width: 200px;">
+                <p>Regista noto per: Parasite, Memorie di un assassino, Snowpiercer, etc.</p>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="bg-dark text-white text-center py-2">
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

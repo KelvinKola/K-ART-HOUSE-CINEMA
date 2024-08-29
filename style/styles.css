@@ -16,6 +16,10 @@ header .logo {
     height: 50px;
 }
 
+html {
+    overflow-y: scroll; /* FA SI CHE LA BARRA DI SCORRIMENTO NON SPARISCA */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -36,16 +40,28 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 60px;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
+    font-size: small;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 35px;
+}
+
+.movie img {
+    width: 420px; /* Larghezza fissa */
+    height: 600px; /* Mantiene le proporzioni */
+    max-height: auto; /* Altezza massima per tutte le immagini */
+    object-fit: cover; /* Mantiene l'immagine ritagliata in modo da coprire l'intera area */
+    margin: 0 auto; /* Centra l'immagine */
+    display: block; /* Imposta l'immagine come blocco per allinearla meglio */
 }
 
 .movie-feed, .movie-list, .author-list {
@@ -91,26 +107,81 @@ footer {
     border-bottom: none;
 }
 
-.movie img, .author img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.comment {
-    margin-bottom: 10px;
-}
-
-.upvote, .downvote {
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.upvote:hover, .downvote:hover {
-    text-decoration: underline;
-}
-
 .table-responsive {
     margin-top: 20px;
 }
+.description-content {
+    display: none;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    padding: 10px; 
+}
+
+.toggle-button {
+    background-color: #005a6a; /*SFONDO TASTO*/
+    color: white; /*SCRITTA TASTO*/
+    border: none; /*BORDO TASTO*/
+    padding: 7px 15px; 
+    border-radius: 5px; /*ARROTONDAMENTO BORDI*/
+    cursor: pointer; /*CAMBIA QUANDO IL MOUSE PASSA SOPRA*/
+    transition: background-color 0.3s ease; /*TEMPO DI REAZIONE PER IL "CURSOR*/
+    font-size: 16px; /*DIMENSIONI TESTO*/
+}
+
+/*PARTE DEDICATA AI COMMENTI*/
+
+#comments-section {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+#comments-list .list-group-item {
+    display: flex;
+    align-items: center;
+}
+#comments-list .list-group-item::before {
+    content: none; /* Rimuove i puntini prima dei commenti */
+}
+#comments-list .badge {
+    font-size: 14px;
+    margin-left: 10px;
+}
+#comments-list .list-group-item strong {
+    margin-right: 5px;
+    color: #007bff; /* Colore del nome utente */
+}
+
+/*DESCRIZIONE A TENDINA DEI FILM NELLA PAGINA FILM.HTML*/
+
+.movie-details-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.movie-image {
+    margin-right: 20px;
+}
+.movie-description {
+    max-width: 600px;
+    text-align: left; /* Allinea il testo a sinistra */
+}
+.movie-description h2 {
+    font-size: 24px; /* Dimensione del titolo */
+    margin: 0 0 10px 0; /* Rimuove margini aggiuntivi */
+    padding-left: 0; /* Rimuove qualsiasi padding a sinistra */
+    text-align: left; /* Allinea il testo a sinistra */
+}
+.movie-description p {
+    margin: 0 0 10px;
+}
+.movie-image button {
+    display: block;
+    margin: 10px auto 0 auto; /* Margine superiore per distanziare il bottone dall'immagine */
+}
+
