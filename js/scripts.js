@@ -103,6 +103,16 @@ function toggleMovieDetails(movieId) {
     }
 }
 
+function goBack() {
+    // Nascondi tutti i dettagli dei film
+    const allDetails = document.querySelectorAll('.movie-details');
+    allDetails.forEach(detail => detail.style.display = 'none');
+
+    // Mostra di nuovo la lista dei film
+    const movieList = document.querySelector('.table-responsive');
+    movieList.style.display = '';
+}
+
 /*FUNZIONE FILTRO PAGINA AUTORI*/
 
 function filterAuthors() {
@@ -150,6 +160,9 @@ function toggleAuthorDetails(authorId) {
         // Mostra il blocco selezionato
         authorDetails.style.display = 'block';
         
+         // Nascondi la lista dei film
+         authorList.style.display = 'none';
+     
     }
 }
 
@@ -188,14 +201,4 @@ function addComment() {
         commentList.appendChild(newComment);
         document.getElementById('comment-form').reset(); // Reset del form dopo l'invio
     }
-}
-
-function goBack() {
-    // Nascondi tutti i dettagli dei film
-    const allDetails = document.querySelectorAll('.movie-details');
-    allDetails.forEach(detail => detail.style.display = 'none');
-
-    // Mostra di nuovo la lista dei film
-    const movieList = document.querySelector('.table-responsive');
-    movieList.style.display = '';
 }

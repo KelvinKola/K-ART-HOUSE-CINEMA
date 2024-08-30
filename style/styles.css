@@ -189,3 +189,29 @@ h2 {
     margin-top: auto; /* Spinge il bottone in basso */
     align-self: flex-start; /* Allinea il bottone a sinistra (opzionale) */
 }
+
+/*BIOGRAFIA A TENDINA DEGLI AUTORI NELLA PAGINA AUTORI.HTML*/
+
+.author-details-container {
+    display: flex;
+    flex-direction: row; /* Dispone gli elementi in una riga */
+    align-items: center; /* Allinea verticalmente l'immagine e il testo */
+    margin-bottom: 20px; /* Aggiunge spazio sotto il contenitore */
+}
+
+.author-image {
+    margin-right: 20px; /* Spazio tra l'immagine e il testo */
+    flex-shrink: 0; /* Impedisce all'immagine di ridursi */
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Spinge il contenuto di author-info in alto */
+}
+.author-info h3 {
+    padding-bottom: 10px;
+}
+.author-info p {
+    margin-bottom: 5px; /* Riduce lo spazio tra i paragrafi */
+}

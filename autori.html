@@ -25,7 +25,11 @@
             </form>
         </div>
     </header>
+
     <main class="container mt-4">
+
+            <!--FILTRO AUTORI-->
+
         <aside class="col-md-3 float-left">
             <h4>FILTRO:</h4>
             <div class="form-group">
@@ -49,6 +53,9 @@
             <button class="btn btn-primary" onclick="filterAuthors()">Filtro</button>
             <button class="btn btn-secondary" onclick="viewAllAuthors()">Vedi tutti</button>
         </aside>
+
+                    <!--LISTA AUTORI-->
+
         <section class="col-md-9 float-right">
             <h2>Autori</h2>
             <div id="author-details" style="display: none;">
@@ -81,23 +88,57 @@
             </table>
         
             <!-- Dettagli degli autori -->
+             
+            <!--KIM KI-DUK-->
+
             <div id="kim-ki-duk-details" class="author-details" style="display: none;">
-                <h3>Kim Ki-duk</h3>
-                <img src="img/kim-ki-duk.jpg" alt="Kim Ki-duk" style="width: 200px;">
-                <p>Regista noto per: Primavera, Estate, Autunno, Inverno... e ancora Primavera, Ferro 3, Pietà, etc.</p>
+                <div class="author-details-container">
+                    <div class="author-image">
+                        <img src="img/kim-ki-duk.jpg" alt="Kim Ki-duk" style="width: 300px;">
+                    </div>
+                    <div class="author-info">
+                        <h3>Kim Ki-duk</h3>
+                        <p><h5>Nascita:</h5> 20 dicembre 1960, <strong>Chunyang-myeon, Bonghwa, Corea del Sud</strong></p>
+                        <p><h5>Morte:</h5> 11 dicembre 2020, <strong>Riga, Lettonia</strong></p>
+                    </div>
+                </div>
+                <div class="author-bio">
+                    <p>Regista noto per: Primavera, Estate, Autunno, Inverno... e ancora Primavera, Ferro 3, Pietà, etc.</p>
+                </div>    
             </div>
-        
+ 
+            <!--PARK CHAN-WOOK-->
+
             <div id="park-chan-wook-details" class="author-details" style="display: none;">
-                <h3>Park Chan-wook</h3>
-                <img src="img/park-chan-wook.jpg" alt="Park Chan-wook" style="width: 200px;">
-                <p>Regista noto per: Oldboy, The Handmaiden, I'm a Cyborg, But That's OK, etc.</p>
+                <div class="author-details-container">
+                    <div class="author-image">
+                        <img src="img/park-chan-wook.jpg" alt="Park Chan-wook" style="width: 300px;">
+                    </div>
+                    <div class="author-info">
+                        <h3>Park Chan-wook</h3>
+                    </div>
+                </div>
+                <div class="author-bio">    
+                    <p>Regista noto per: Oldboy, The Handmaiden, I'm a Cyborg, But That's OK, etc.</p>
+                </div>    
             </div>
         
+            <!--BOONG JOON-HO-->
+
             <div id="bong-joon-ho-details" class="author-details" style="display: none;">
-                <h3>Bong Joon-ho</h3>
-                <img src="img/bong-joon-ho.jpg" alt="Bong Joon-ho" style="width: 200px;">
-                <p>Regista noto per: Parasite, Memorie di un assassino, Snowpiercer, etc.</p>
+                <div class="author-details-container">
+                    <div class="author-image">               
+                        <img src="img/bong-joon-ho.jpg" alt="Bong Joon-ho" style="width: 300px;">
+                    </div>
+                    <div class="author-info">
+                        <h3>Bong Joon-ho</h3>
+                    </div>
+                </div>    
+                <div class="author-bio">    
+                    <p>Regista noto per: Parasite, Memorie di un assassino, Snowpiercer, etc.</p>
+                </div>        
             </div>
+
         </section>
         
     </main>
