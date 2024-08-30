@@ -164,21 +164,20 @@ h2 {
     align-items: flex-start;
     margin-top: 20px;
 }
-.movie-image img {
-    max-width: 100%; /* Assicura che l'immagine non superi la larghezza del contenitore */
-    height: auto; /* Mantiene le proporzioni dell'immagine */
-    width: 300px; /* Imposta una nuova larghezza per ingrandire l'immagine */
-    padding-right: 20px;
-    padding-bottom: 30px;
+.movie-image {
+    flex: 0 0 auto;
+    margin-right: 15px;
+    margin-bottom: 30px;
 }
-
+.movie-image img {
+    max-width: 100%;
+    height: auto;
+    width: 300px; /* Aumenta la larghezza dell'immagine */
+    display: block;
+}
 .movie-description {
     max-width: 600px;
     text-align: left; /* Allinea il testo a sinistra */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
 }
 .movie-description h2 {
     font-size: 24px; /* Dimensione del titolo */
