@@ -16,6 +16,18 @@ header .logo {
     height: 50px;
 }
 
+.logo {
+    display: inline-block; /* Assicura che il logo non sia trattato come un blocco completo */
+    max-width: 100%; 
+    height: auto; 
+}
+
+a.logo-link {
+    display: inline-block; /* Assicura che il link non influenzi il layout */
+    text-decoration: none; /* Rimuove eventuali effetti di decorazione del link */
+}
+
+
 html {
     overflow-y: scroll; /* FA SI CHE LA BARRA DI SCORRIMENTO NON SPARISCA */
 }
@@ -286,6 +298,7 @@ h2 {
 .film-container p a:hover {
     text-decoration: underline; /* Facoltativo: aggiunge una sottolineatura solo al passaggio del mouse */
 }
+
 
 
 

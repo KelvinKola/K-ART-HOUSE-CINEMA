@@ -205,7 +205,7 @@ function goBackAutori() {
 /*FUNZIONE LOGOUT*/
 
 function logout() {
-    alert('Logged out');
+    alert('Hai effettuato il Logout dal tuo profilo');
 }
 
 
