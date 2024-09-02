@@ -18,7 +18,7 @@ header .logo {
 
 .logo {
     display: inline-block; /* Assicura che il logo non sia trattato come un blocco completo */
-    max-width: 100%; 
+    max-width: auto; 
     height: auto; 
 }
 
@@ -201,6 +201,10 @@ h2 {
     margin-top: auto; /* Spinge il bottone in basso */
     align-self: flex-start; /* Allinea il bottone a sinistra (opzionale) */
 }
+.like-button {
+    margin-left: 10px;
+    cursor: pointer;
+}
 
 /*BIOGRAFIA A TENDINA DEGLI AUTORI NELLA PAGINA AUTORI.HTML*/
 
@@ -298,6 +302,7 @@ h2 {
 .film-container p a:hover {
     text-decoration: underline; /* Facoltativo: aggiunge una sottolineatura solo al passaggio del mouse */
 }
+
 
 
 

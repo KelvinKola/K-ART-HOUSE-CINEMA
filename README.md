@@ -4,7 +4,7 @@ Questo sito web è una piccola enciclopedia dedicata al Art-House Cinema Koreano
 
 ## Struttura
 
-- `index.html`: Pagina principale che visualizza il feed.
+- `index.html`: Pagina principale che visualizza l'home.
 - `catalogo`: Diviso due pagine html nelle quali si può consultare l'elenco dei film e degli autori.
 - `img/`: Cartella contenente le immagini utilizzate nel sito web.
 - `style/`: Cartella contenente gli stili CSS per il sito web.
@@ -12,8 +12,8 @@ Questo sito web è una piccola enciclopedia dedicata al Art-House Cinema Koreano
 
 ## Pagine
 
-### Index (Feed)
-La pagina del feed (`index.html`) visualizza i film recenti e i commenti degli utenti.
+### Index (Home)
+La pagina Home (`index.html`) visualizza i film recenti e i commenti degli utenti.
 
 ### Film
 La pagina del catalogo dei film (`film.html`) elenca i film con i rispettivi dettagli.

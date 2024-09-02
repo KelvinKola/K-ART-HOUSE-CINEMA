@@ -209,3 +209,6 @@ function logout() {
 }
 
 
+function fakeLike() {
+    alert("Hai cliccato su Mi Piace!");
+}
