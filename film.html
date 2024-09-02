@@ -52,18 +52,20 @@
                             <option value="Kim Ki-duk">Kim Ki-duk</option>
                             <option value="Park Chan-wook">Park Chan-wook</option>
                             <option value="Bong Joon-ho">Bong Joon-ho</option>
+                            <option value="Shunji Iwai">Shunji Iwai</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="anno">Anno:</label>
                         <select class="form-control" id="filtro-anno">
                             <option value="">Tutti</option>
+                            <option value="2001">2001</option>
                             <option value="2003">2003</option>
                             <option value="2004">2004</option>
-                            <option value="2005">2006</option>
-                            <option value="2006">2012</option>
-                            <option value="2012">2016</option>
-                            <option value="2016">2019</option>
+                            <option value="2006">2006</option>
+                            <option value="2012">2012</option>
+                            <option value="2016">2016</option>
+                            <option value="2019">2019</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -75,12 +77,13 @@
                             <option value="6">6</option>
                             <option value="7">7</option>
                             <option value="9">9</option>
+                            <option value="11">11</option>
                             <option value="13">13</option>
                             <option value="21">21</option>
                         </select>
                     </div>
                     <button class="btn btn-primary" onclick="filterCatalog()">Filtro</button>
-                    <button class="btn btn-secondary" onclick="viewAll()">Vedi Tutti</button>
+                    <button class="btn btn-secondary" onclick="viewAllFilms()">Vedi tutti</button>
                 </div>
             </aside>
 
@@ -146,11 +149,41 @@
                                 <td>2016</td>
                                 <td>5</td>
                             </tr>
+                            <tr>
+                                <td><a href="javascript:void(0)" onclick="toggleMovieDetails('movie-lily-chou-chou')">All About Lily Chou Chou</a></td>
+                                <td>Shunji Iwai</td>
+                                <td>2001</td>
+                                <td>11</td>
+                            </tr>    
                         </tbody>
                     </table>
                 </div>
 
                 <!-- DETTAGLI FILM -->
+
+                <!--LILY CHOU CHOU-->
+
+                <div id="movie-lily-chou-chou" class="movie-details">
+                    <div class="movie-details-container">
+                        <div class="movie-image">
+                            <img src="img/lily-chou-chou.jpg" alt="All About Lily Chou-Chou">
+                        </div>
+                        <div class="movie-description">
+                            <h2>All About Lily Chou-Chou</h2>
+                            <p><strong>Diretto da:</strong> Shunji Iwai</p>
+                            <p><strong>Data di rilascio:</strong> 6 Ottobre 2001</p>
+                            <p><strong>Incassi:</strong> $ 0.5-1 millioni</p>
+                            <button class="btn btn-secondary" onclick="goBackFilm()">Torna Indietro</button>
+                        </div>
+                    </div>
+                    <div class="movie-plot">
+                        <p>"All About Lily Chou-Chou" è un film del 2001 diretto da Shunji Iwai. È un dramma giapponese che esplora l'adolescenza, l'alienazione e l'impatto della cultura pop, attraverso la storia di un gruppo di giovani che trovano rifugio nella musica della misteriosa pop star Lily Chou-Chou.</p>
+                        <p><strong>Trama: (contiene Spoiler)</strong></p>
+                        <p>La storia ruota attorno a un gruppo di studenti delle scuole medie, in particolare Yuichi Hasumi, un ragazzo introverso e solitario che gestisce un forum online dedicato alla sua cantante preferita, Lily Chou-Chou. La musica di Lily, caratterizzata da toni eterei e malinconici, diventa una sorta di rifugio per Yuichi e altri fan, che si sentono alienati dalla realtà che li circonda. Il film alterna scene della vita reale di Yuichi con interazioni virtuali sul forum, dove gli utenti condividono le loro riflessioni sulla "Ether," una sorta di energia spirituale che dicono essere emanata dalla musica di Lily. La storia esplora le difficoltà dell'adolescenza in un contesto di bullismo, violenza e solitudine. Yuichi, una volta amico di Hoshino, un ragazzo intelligente e popolare, vede il suo amico cambiare drasticamente dopo un viaggio traumatico. Hoshino si trasforma in un bullo crudele, che inizia a tormentare Yuichi e altri compagni di scuola. Mentre la vita reale di Yuichi diventa sempre più insostenibile, con episodi di bullismo estremamente violenti e umilianti, la sua ossessione per Lily Chou-Chou cresce, culminando in un incontro tragico durante un concerto della cantante. Il film si conclude con un senso di desolazione e disperazione, riflettendo le profonde ferite emotive subite dai personaggi.</p>
+                        <p>"All About Lily Chou-Chou" è un ritratto crudo e poetico dell'adolescenza, in cui Shunji Iwai esplora l'alienazione e la sofferenza giovanile attraverso la lente della cultura pop e del mondo virtuale. Il film cattura la fragilità emotiva dei personaggi e il loro disperato bisogno di trovare un senso di appartenenza, anche se solo nel mondo immaginario creato dalla musica di Lily Chou-Chou. La narrazione frammentata e l'uso di forum online come strumento narrativo riflettono la frammentazione dell'identità dei giovani protagonisti, rendendo il film un'opera profondamente evocativa e tristemente attuale. Con la sua atmosfera malinconica e la rappresentazione sincera delle difficoltà dell'adolescenza, "All About Lily Chou-Chou" è un film che tocca corde emotive universali, lasciando un'impressione duratura su chi lo guarda.</p>    
+                    </div>
+                </div>
+
                
                 <!--PRIMAVERA ESTATE AUTUNNO ETC-->
                 
@@ -163,8 +196,8 @@
                             <h2>Primavera, Estate, Autunno, Inverno... e ancora Primavera</h2>
                             <p><strong>Diretto da:</strong> Kim Ki-duk</p>
                             <p><strong>Data di rilascio:</strong> 19 Settembre 2003</p>
-                            <p><strong>Incassi:</strong> $9.53 millioni</p>
-                            <button class="btn btn-secondary" onclick="goBack()">Torna Indietro</button>
+                            <p><strong>Incassi:</strong> $ 9.53 millioni</p>
+                            <button class="btn btn-secondary" onclick="goBackFilm()">Torna Indietro</button>
                         </div>
                     </div>
                     <div class="movie-plot">
@@ -193,8 +226,8 @@
                             <h2>Ferro 3</h2>
                             <p><strong>Diretto da:</strong> Kim Ki-duk</p>
                             <p><strong>Data di rilascio:</strong> 15 Ottobre 2004</p>
-                            <p><strong>Incassi:</strong> $3.4 millioni</p>
-                            <button class="btn btn-secondary" onclick="goBack()">Torna Indietro</button>
+                            <p><strong>Incassi:</strong> $ 3.4 millioni</p>
+                            <button class="btn btn-secondary" onclick="goBackFilm()">Torna Indietro</button>
                         </div>
                     </div>
                     <div class="movie-plot">
@@ -216,8 +249,8 @@
                             <h2>Oldboy</h2>
                             <p><strong>Diretto da:</strong> Park Chan-wook</p>
                             <p><strong>Data di rilascio:</strong> 21 Novembre 2003</p>
-                            <p><strong>Incassi:</strong> $15 millioni</p>
-                            <button class="btn btn-secondary" onclick="goBack()">Torna Indietro</button>
+                            <p><strong>Incassi:</strong> $ 15 millioni</p>
+                            <button class="btn btn-secondary" onclick="goBackFilm()">Torna Indietro</button>
                         </div>
                     </div>
                     <div class="movie-plot">
@@ -239,8 +272,8 @@
                             <h2>Parasite</h2>
                             <p><strong>Diretto da:</strong> Bong Joon-ho</p>
                             <p><strong>Data di rilascio:</strong> 30 Maggio 2019</p>
-                            <p><strong>Incassi:</strong> $258 millioni</p>
-                            <button class="btn btn-secondary" onclick="goBack()">Torna Indietro</button>
+                            <p><strong>Incassi:</strong> $ 263 millioni</p>
+                            <button class="btn btn-secondary" onclick="goBackFilm()">Torna Indietro</button>
                         </div>
                     </div>
                     <div class="movie-plot">
@@ -262,8 +295,8 @@
                             <h2>Memorie di un assassino</h2>
                             <p><strong>Diretto da:</strong> Bong Joon-ho</p>
                             <p><strong>Data di rilascio:</strong> 2 Maggio 2003</p>
-                            <p><strong>Incassi:</strong> $20.1 millioni</p>
-                            <button class="btn btn-secondary" onclick="goBack()">Torna Indietro</button>
+                            <p><strong>Incassi:</strong> $ 20.1 millioni</p>
+                            <button class="btn btn-secondary" onclick="goBackFilm()">Torna Indietro</button>
                         </div>
                     </div>
                     <div class="movie-plot">
@@ -285,8 +318,8 @@
                             <h2>Pietà</h2>
                             <p><strong>Diretto da:</strong> Kim Ki-duk</p>
                             <p><strong>Data di rilascio:</strong> 6 Settembre 2012</p>
-                            <p><strong>Incassi:</strong> $0.32 millioni</p>
-                            <button class="btn btn-secondary" onclick="goBack()">Torna Indietro</button>
+                            <p><strong>Incassi:</strong> $ 2 millioni</p>
+                            <button class="btn btn-secondary" onclick="goBackFilm()">Torna Indietro</button>
                         </div>
                     </div>
                     <div class="movie-plot">
@@ -308,8 +341,8 @@
                             <h2>I'm a Cyborg, But That's OK</h2>
                             <p><strong>Diretto da:</strong> Park Chan-wook</p>
                             <p><strong>Data di rilascio:</strong> 7 Dicembre 2006</p>
-                            <p><strong>Incassi:</strong> $8.3 millioni</p>
-                            <button class="btn btn-secondary" onclick="goBack()">Torna Indietro</button>
+                            <p><strong>Incassi:</strong> $ 8.3 millioni</p>
+                            <button class="btn btn-secondary" onclick="goBackFilm()">Torna Indietro</button>
                         </div>
                     </div>
                     <div class="movie-plot">
@@ -331,8 +364,8 @@
                             <h2>The Handmaiden - Mademoiselle</h2>
                             <p><strong>Diretto da:</strong> Park Chan-wook</p>
                             <p><strong>Data di rilascio:</strong> 1 Giugno 2016</p>
-                            <p><strong>Incassi:</strong> $37.8 millioni</p>
-                            <button class="btn btn-secondary" onclick="goBack()">Torna Indietro</button>
+                            <p><strong>Incassi:</strong> $ 37.8 millioni</p>
+                            <button class="btn btn-secondary" onclick="goBackFilm()">Torna Indietro</button>
                         </div>
                     </div>
                     <div class="movie-plot">

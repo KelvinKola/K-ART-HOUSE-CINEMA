@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,28 +22,63 @@
         </div>
     </header>
     <main class="container mt-4">
-        <section>
-            <h2>User Profile</h2>
-            <p><strong>Username:</strong> Kelvin Kola</p>
-            <p><strong>Email:</strong> kelvinkola@example.com</p>
-            <button class="btn btn-danger mb-3" onclick="logout()">Logout</button>
+        <section style="position: relative;">
+            <button class="btn btn-danger" onclick="logout()" style="position: absolute; top: 10px; right: 10px;">Esci</button>
+            <div style="display: flex; align-items: center;">
+                <img src="img/user-profile.jpg" alt="User Profile Picture" style="width: 200px; height: 200px; border-radius: 50%; margin-right: 20px;">
+                <div>
+                    <h2 style="margin-top: -70px; padding-left: 0;">Profilo Utente</h2>
+                    <p style="margin-left: 0;"><strong>Username:</strong> Kelvin Kola</p>
+                    <p style="margin-left: 0;"><strong>Email:</strong> kelvinkola@example.com</p>
+                </div>
+            </div>
         </section>
+
         <section>
-            <h3>Commenti caricati:</h3>
+            <h4 style="margin-top: 30px">Commenti:</h4>
             <ul>
-                <li>Queso film manda un messaggio bellissimo. Film- Primavera, Estate ...</li>
-                <li>Stressante ma iconico. Film- All about Lily Chou Chou</li>
+                <li><strong>Primavera, Estate, Autunno, Inverno... e ancora Primavera:</strong> "Questo film manda un messaggio bellissimo."</li>
+                <li><strong>All about Lily Chou Chou:</strong> "Un film che ti lascia pensare a lungo dopo i titoli di coda. Profondo e struggente."</li>
             </ul>
         </section>
+
         <section>
-            <h3>Film Piaciuti</h3>
-            <ul>
-                <li>Parasite</li>
-                <li>Primavera, Estate, Autunno, Inverno... e ancora Primavera</li>
-                <li>Oldboy</li>
-                <li>All about Lily Chou Chou</li>
-            </ul>
-        </section>
+            <h4 style="margin-top: 30px;margin-bottom: 15px;">Film Preferiti</h4>
+            <div class="film-container">
+                <div>
+                    <img src="img/bong-joon-ho-parasite.jpg" alt="Parasite">
+                    <p>
+                        <a href="film.html" title="Parasite">
+                            Parasite
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <img src="img/kim-ki-duk-spring-2.jpg" alt="Primavera, Estate, Autunno, Inverno... e ancora Primavera">
+                    <p>
+                        <a href="film.html" title="Primavera, Estate, Autunno, Inverno... e ancora Primavera">
+                            Primavera, Estate, Autunno, Inverno... e ancora Primavera
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <img src="img/park-chan-wook-oldboy.jpg" alt="Oldboy">
+                    <p>
+                        <a href="film.html" title="Oldboy">
+                            Oldboy
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <img src="img/lily-chou-chou.jpg" alt="All about Lily Chou Chou">
+                    <p>
+                        <a href="film.html" title="All about Lily Chou Chou">
+                            All about Lily Chou Chou
+                        </a>
+                    </p>
+                </div>
+                        </section>
+        
     </main>
     <footer class="bg-dark text-white text-center py-2">
         <p>&copy; 2024 All Rights Reserved</p>

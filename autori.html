@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,6 +39,7 @@
                     <option value="Kim Ki-duk">Kim Ki-duk</option>
                     <option value="Park Chan-wook">Park Chan-wook</option>
                     <option value="Bong Joon-ho">Bong Joon-ho</option>
+                    <option value="Shunji Iwai">Shunji Iwai</option>
                 </select>
             </div>
             <div class="form-group">
@@ -48,6 +49,7 @@
                     <option value="4.5">4.5</option>
                     <option value="4.7">4.7</option>
                     <option value="4.8">4.8</option>
+                    <option value="4.1">4.1</option>
                 </select>
             </div>
             <button class="btn btn-primary" onclick="filterAuthors()">Filtro</button>
@@ -57,7 +59,6 @@
                     <!--LISTA AUTORI-->
 
         <section class="col-md-9 float-right">
-            <h2>Autori</h2>
             <div id="author-details" style="display: none;">
                 <h3 id="author-name"></h3>
                 <img id="author-image" src="" alt="Author Image" style="width: 200px;">
@@ -84,6 +85,10 @@
                         <td><a href="#" onclick="toggleAuthorDetails('bong-joon-ho-details')">Bong Joon-ho</a></td>
                         <td>4.8</td>
                     </tr>
+                    <tr>
+                        <td><a href="#" onclick="toggleAuthorDetails('shunji-iwai-details')">Shunji Iwai</a></td>
+                        <td>4.1</td>
+                    </tr>
                 </tbody>
             </table>
         
@@ -92,6 +97,9 @@
             <!--KIM KI-DUK-->
 
             <div id="kim-ki-duk-details" class="author-details" style="display: none;">
+                <div class="back-button-container">
+                    <button class="btn btn-secondary" onclick="goBackAutori()">Indietro</button>
+                </div>
                 <div class="author-details-container">
                     <div class="author-image">
                         <img src="img/kim-ki-duk.jpg" alt="Kim Ki-duk" style="width: 300px;">
@@ -109,12 +117,15 @@
                     <p><h5>Controversie</h5></p> <p>La carriera di Kim Ki-duk non è stata esente da controversie. Il regista è stato spesso criticato per la rappresentazione estrema della violenza e del sesso nei suoi film, e per il modo in cui ha trattato le attrici durante le riprese. Nel 2017, è stato accusato di molestie sessuali da parte di un'attrice, accusa che ha portato a un'indagine e a una temporanea sospensione della sua attività cinematografica. Kim ha sempre negato le accuse, ma l'episodio ha macchiato la sua reputazione, soprattutto in patria.</p>
                     <p><h5>Ultimi Anni e Morte</h5></p> <p>Nonostante le controversie, Kim ha continuato a lavorare fino alla sua morte. Negli ultimi anni, si era trasferito in Lettonia, dove stava sviluppando nuovi progetti cinematografici. Kim Ki-duk è morto l'11 dicembre 2020 a Riga, Lettonia, a causa di complicazioni legate al COVID-19. La sua morte ha lasciato un grande vuoto nel mondo del cinema, ma la sua eredità continua a vivere attraverso i suoi film, che rimangono oggetto di studio e discussione tra critici e cinefili di tutto il mondo.</p>
                     <p><h5>Eredità</h5></p> <p>Kim Ki-duk è ricordato come un regista iconoclasta, capace di sfidare le convenzioni e di spingersi oltre i limiti del cinema tradizionale. I suoi film sono spesso difficili da guardare, ma offrono una profondità emotiva e una riflessione critica sulla natura umana che li rendono unici. La sua capacità di unire bellezza e brutalità, contemplazione e provocazione, ha fatto di lui una figura centrale nel panorama del cinema mondiale. La sua opera continua a influenzare nuovi registi e a stimolare dibattiti sulla natura del cinema come forma d'arte e mezzo di espressione. Nonostante le polemiche, Kim Ki-duk rimane una delle voci più originali e significative del cinema contemporaneo.</p>
-                </div>    
+                </div> 
             </div>
  
             <!--PARK CHAN-WOOK-->
 
             <div id="park-chan-wook-details" class="author-details" style="display: none;">
+                <div class="back-button-container">
+                    <button class="btn btn-secondary" onclick="goBackAutori()">Indietro</button>
+                </div>
                 <div class="author-details-container">
                     <div class="author-image">
                         <img src="img/park-chan-wook.jpg" alt="Park Chan-wook" style="width: 300px;">
@@ -136,6 +147,9 @@
             <!--BOONG JOON-HO-->
 
             <div id="bong-joon-ho-details" class="author-details" style="display: none;">
+                <div class="back-button-container">
+                    <button class="btn btn-secondary" onclick="goBackAutori()">Indietro</button>
+                </div>
                 <div class="author-details-container">
                     <div class="author-image">               
                         <img src="img/bong-joon-ho.jpg" alt="Bong Joon-ho" style="width: 300px;">
@@ -155,6 +169,33 @@
                     <p><h5>Vita Personale e Impatto</h5> Nonostante il suo successo internazionale, Bong Joon-ho è noto per la sua modestia e il suo stile di vita riservato. Vive con la sua famiglia a Seoul, dove continua a lavorare a nuovi progetti cinematografici. Il suo impatto sul cinema mondiale è innegabile, avendo ispirato una nuova generazione di registi e ampliato i confini del cinema coreano nel panorama globale. La sua capacità di raccontare storie universali attraverso una lente specifica e culturalmente radicata lo ha reso uno dei registi più rispettati e amati del nostro tempo. Con ogni nuovo film, Bong Joon-ho continua a sfidare le aspettative e a spingere i confini del cinema, consolidando la sua posizione come uno dei più grandi registi della sua generazione.</p>
                 </div>        
             </div>
+            
+             <!--SHUNJI IWAI-->
+
+            <div id="shunji-iwai-details" class="author-details" style="display: none;">
+                <div class="back-button-container">
+                    <button class="btn btn-secondary" onclick="goBackAutori()">Indietro</button>
+                </div>
+                <div class="author-details-container">
+                    <div class="author-image">
+                        <img src="img/Shunji-Iwai.jpg" alt="Shunji Iwai" style="width: 300px;">
+                    </div>
+                    <div class="author-info">
+                        <h3>Shunji Iwai</h3>
+                        <p><h5>Nascita:</h5> 24 gennaio 1963 (età 61 anni) <strong>  Sendai, Prefettura di Miyagi, Giappone</strong></p>
+                    </div>
+                </div>
+                <div class="author-bio">    
+                    <p>Shunji Iwai è un rinomato regista, sceneggiatore e musicista giapponese, noto per il suo stile cinematografico poetico e visivamente evocativo. Nato il 24 gennaio 1963 a Sendai, nella prefettura di Miyagi, Giappone, Iwai ha guadagnato popolarità grazie alla sua capacità di catturare emozioni sottili e temi profondi attraverso un'estetica unica che ha lasciato un'impronta duratura nel cinema giapponese e internazionale.</p>
+                    <p><h5>Formazione e Inizio Carriera</h5>Shunji Iwai ha studiato presso la Yokohama National University, dove si è laureato in architettura. Tuttavia, il suo interesse per il cinema lo ha portato presto a dirigere video musicali, spot pubblicitari e programmi televisivi. Ha iniziato la sua carriera nel mondo dello spettacolo dirigendo video musicali negli anni '80, quando l'industria musicale giapponese stava attraversando un periodo di fioritura. Iwai si è distinto per la sua capacità di creare atmosfere intense e visivamente accattivanti anche nei brevi formati. Nel 1993, Iwai ha debuttato come regista cinematografico con il mediometraggio "Fireworks" ("Uchiage Hanabi, Shita kara Miru ka? Yoko kara Miru ka?"), che è stato trasmesso come film televisivo. Questo lavoro, che mescola nostalgia, giovinezza e amore, è diventato un cult e ha segnato l'inizio della sua carriera come regista di lungometraggi.</p>
+                    <p><h5>Il Successo di "Love Letter" e la Consacrazione</h5>Il vero successo per Shunji Iwai è arrivato nel 1995 con il film <strong>"Love Letter"</strong>, che lo ha consacrato come uno dei registi più promettenti del cinema giapponese. "Love Letter" è una storia di amore e perdita, caratterizzata da una narrazione delicata e una regia visivamente poetica. Il film è stato un enorme successo sia in Giappone che all'estero, in particolare in Corea del Sud, dove ha riscosso un successo senza precedenti per un film giapponese. La sua rappresentazione dell'amore non corrisposto e dei ricordi sepolti ha toccato il cuore di molti spettatori, rendendo "Love Letter" uno dei film più iconici degli anni '90.</p>
+                    <p><h5>Espansione del Suo Stile e Tematiche Ricorrenti</h5>Dopo "Love Letter", Iwai ha continuato a esplorare temi di giovinezza, amore, solitudine e nostalgia nei suoi film. Nel 1996, ha diretto <strong>"Swallowtail Butterfly"</strong>, un film che esplora il tema dell'identità in una Tokyo futuristica e multiculturale. "Swallowtail Butterfly" è stato elogiato per la sua narrazione complessa e la sua visione distopica di una società globalizzata. Un altro dei suoi film più noti è <strong>"April Story"</strong> ("Shigatsu Monogatari", 1998), un film che segue la storia di una giovane donna che si trasferisce a Tokyo per frequentare l'università. La semplicità della trama è arricchita dall'approccio lirico di Iwai alla regia, che si concentra su dettagli sottili e momenti di introspezione. Nel 2001, Iwai ha diretto <strong>"All About Lily Chou-Chou"</strong>, un film che affronta i problemi della gioventù giapponese, tra cui il bullismo, l'alienazione e la ricerca di identità. Il film, girato in parte con telecamere digitali e con un forte uso di internet e della musica come temi centrali, ha colpito il pubblico per il suo ritratto realistico e toccante delle difficoltà adolescenziali.</p>
+                    <p><h5>Lavori Internazionali e Collaborazioni</h5>Oltre ai suoi lavori in Giappone, Shunji Iwai ha collaborato a progetti internazionali. Nel 2004, ha realizzato il cortometraggio <strong>"Hana & Alice"</strong>, che è stato successivamente sviluppato in un lungometraggio l'anno successivo. Questo film, che racconta la storia di due amiche adolescenti, è stato apprezzato per il suo approccio tenero e la sua capacità di catturare l'essenza dell'adolescenza. Nel 2011, Iwai ha diretto il suo primo film in lingua inglese, <strong>"Vampire"</strong>, una storia oscura e meditativa che esplora il lato umano dei "vampiri" moderni. Sebbene il film non abbia ottenuto lo stesso livello di successo dei suoi lavori precedenti, ha mostrato la volontà di Iwai di esplorare nuovi territori narrativi e stilistici.</p>
+                    <p><h5>Stile e Tematiche</h5>Il cinema di Shunji Iwai è spesso caratterizzato da un'estetica lirica e contemplativa. Le sue opere si concentrano su emozioni sottili e spesso inesplorate, utilizzando un ritmo narrativo lento e una fotografia curata per creare un'atmosfera coinvolgente e immersiva. Iwai è noto per la sua capacità di catturare la bellezza dei piccoli momenti e di esplorare tematiche universali attraverso una lente profondamente personale. I temi ricorrenti nei suoi film includono l'amore, la solitudine, la nostalgia e la giovinezza. Iwai è anche noto per la sua attenzione ai dettagli visivi, spesso utilizzando colori tenui e una composizione elegante per creare immagini di grande impatto emotivo.</p>
+                    <p><h5>Vita Personale e Impatto</h5>Shunji Iwai è una figura riservata e non ama stare sotto i riflettori. Vive una vita privata lontano dall'industria dello spettacolo, ma continua a essere una voce influente nel cinema giapponese e mondiale. Nonostante la sua discrezione, il suo lavoro ha avuto un impatto duraturo, influenzando molti giovani registi e diventando un punto di riferimento per il cinema giapponese contemporaneo. Iwai ha anche dimostrato il suo talento musicale, componendo colonne sonore per molti dei suoi film, confermando la sua poliedricità come artista. La sua capacità di trasmettere emozioni profonde attraverso il cinema e la musica lo ha reso una figura unica nel panorama artistico internazionale. Con una carriera che abbraccia più di tre decenni, Shunji Iwai continua a creare opere che esplorano il lato più intimo e personale delle esperienze umane, consolidando il suo posto come uno dei registi più rispettati e influenti del cinema giapponese.</p>
+                </div>    
+            </div>
+
 
         </section>
         

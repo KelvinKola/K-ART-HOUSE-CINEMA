@@ -199,6 +199,10 @@ h2 {
     margin-bottom: 20px; /* Aggiunge spazio sotto il contenitore */
 }
 
+.author-details {
+    display: none; /* Nascondi i dettagli di default */
+}
+
 .author-image {
     margin-right: 20px; /* Spazio tra l'immagine e il testo */
     flex-shrink: 0; /* Impedisce all'immagine di ridursi */
@@ -215,3 +219,76 @@ h2 {
 .author-info p {
     margin-bottom: 5px; /* Riduce lo spazio tra i paragrafi */
 }
+.author-bio {
+    margin-bottom: 60px; /* Aggiungi 20px di margine inferiore */
+}
+.back-button-container {
+    text-align: left; /* Allinea il pulsante a destra */
+    margin-bottom: 20px; /* Spazio sotto il pulsante */
+    margin-top: -10px; /* Sposta il pulsante più in alto */
+}
+
+/*FILM PIACUITI NELLA PAGINA "PROFILO"*/
+
+.film-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.film-container div {
+    text-align: center;
+}
+
+.film-container img {
+    width: 150px;
+    height: 225px;
+    object-fit: cover;
+}
+
+.film-container p {
+    font-size: 20px;
+    white-space: nowrap;         /* Evita che il testo vada a capo */
+    overflow: hidden;            /* Nasconde il testo che eccede */
+    text-overflow: ellipsis;     /* Mostra i puntini di sospensione per il testo troncato */
+    max-width: 100px;            /* Imposta la larghezza massima del contenitore del testo */
+}
+
+[title] {
+    position: relative;
+}
+
+[title]::after {
+    content: attr(title);
+    position: absolute;
+    left: 50%;
+    bottom: 125%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+[title]:hover::after {
+    opacity: 1;
+}
+
+.film-container p a {
+    color: inherit; /* Mantiene il colore del testo */
+    text-decoration: none; /* Rimuove la sottolineatura del link */
+}
+
+.film-container p a:hover {
+    text-decoration: underline; /* Facoltativo: aggiunge una sottolineatura solo al passaggio del mouse */
+}
+
+
+
+
+
+
