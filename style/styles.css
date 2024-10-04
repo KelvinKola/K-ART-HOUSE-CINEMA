@@ -67,109 +67,32 @@ footer {
     height: 35px;
 }
 
-.movie img {
-    width: 420px; /* Larghezza fissa */
-    height: 600px; /* Mantiene le proporzioni */
-    max-height: auto; /* Altezza massima per tutte le immagini */
-    object-fit: cover; /* Mantiene l'immagine ritagliata in modo da coprire l'intera area */
-    margin: 0 auto; /* Centra l'immagine */
-    display: block; /* Imposta l'immagine come blocco per allinearla meglio */
-}
+/*CSS RIGUARDANTI L'HOMEPAGE*/---------------------------------------------------------------------------------------------------------
 
-.movie-feed, .movie-list, .author-list {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-}
+/*BARRA DI RICERCA*/-------------------------------------------------------------------------------------------------------------------
 
-.movie, .author {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center; /* Center text within each movie/author item */
-}
-
-.movie h2, .movie p, .movie ul, .movie li {
-    text-align: center; /* Center the text within movie titles, paragraphs, and list items */
-}
-
-.movie ul {
-    list-style: none;
-    padding: 0;
-}
-
-.movie ul li {
-    display: inline-block;
-    text-align: left; /* Align text within list items */
-}
-
-.movie ul li::before {
-    content: "• ";
-    display: inline-block;
-    text-align: center;
-}
-
-.movie:last-child, .author:last-child {
-    border-bottom: none;
-}
-
-.table-responsive {
-    margin-top: 20px;
-}
-.description-content {
-    display: none;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #f9f9f9;
-}
-
-h2 {
-    padding: 10px; 
-}
-
-.toggle-button {
-    background-color: #005a6a; /*SFONDO TASTO*/
-    color: white; /*SCRITTA TASTO*/
-    border: none; /*BORDO TASTO*/
-    padding: 7px 15px; 
-    border-radius: 5px; /*ARROTONDAMENTO BORDI*/
-    cursor: pointer; /*CAMBIA QUANDO IL MOUSE PASSA SOPRA*/
-    transition: background-color 0.3s ease; /*TEMPO DI REAZIONE PER IL "CURSOR*/
-    font-size: 16px; /*DIMENSIONI TESTO*/
-}
-
-/*PARTE DEDICATA AI COMMENTI*/
-
-#comments-section {
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-#comments-list .list-group-item {
+.searchbar-container {
     display: flex;
+    justify-content: center;
     align-items: center;
-}
-#comments-list .list-group-item::before {
-    content: none; /* Rimuove i puntini prima dei commenti */
-}
-#comments-list .badge {
-    font-size: 14px;
-    margin-left: 10px;
-}
-#comments-list .list-group-item strong {
-    margin-right: 5px;
-    color: #007bff; /* Colore del nome utente */
+    height: 100vh; /* Imposta l'altezza a 100% della viewport per centrare verticalmente */
+    background-image: url('img/your-background-image.jpg'); /* Immagine di sfondo se la desideri */
+    background-size: cover;
+    background-position: center;
 }
 
-/*DESCRIZIONE A TENDINA DEI FILM NELLA PAGINA FILM.HTML*/
+.search-icon input[type="search"] {
+    width: 100%;
+    padding: 15px 20px 15px 40px; /* Adjust left padding to make room for the icon */
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+/*DESCRIZIONE A TENDINA DEI FILM NELLA PAGINA FILM.HTML*/------------------------------------------------------------------------------
 
 .movie-details-container {
     display: flex;
@@ -206,7 +129,7 @@ h2 {
     cursor: pointer;
 }
 
-/*BIOGRAFIA A TENDINA DEGLI AUTORI NELLA PAGINA AUTORI.HTML*/
+/*BIOGRAFIA A TENDINA DEGLI AUTORI NELLA PAGINA AUTORI.HTML*/------------------------------------------------------------------------
 
 .author-details-container {
     display: flex;
@@ -244,7 +167,7 @@ h2 {
     margin-top: -10px; /* Sposta il pulsante più in alto */
 }
 
-/*FILM PIACUITI NELLA PAGINA "PROFILO"*/
+/*FILM PIACUITI NELLA PAGINA "PROFILO"*/---------------------------------------------------------------------------------------------
 
 .film-container {
     display: flex;

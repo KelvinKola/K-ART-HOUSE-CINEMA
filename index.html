@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="style/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </head>
 <body>
     <header class="bg-dark text-white text-center py-1">
@@ -33,15 +34,17 @@
                     <li class="nav-item"><a class="nav-link text-white" href="profilo.html">Profilo</a></li>
                 </ul>
             </nav>
-            <form class="form-inline" onsubmit="return searchMovies()">
-                <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
-            </form>
         </div>
     </header>
     <main class="container mt-4" id="Homepage">
-
-    </main>
+        <div class="searchbar-container">
+            <form action="search.html" method="GET">
+                <div class="search-icon">
+                    <input type="search" name="q" placeholder="Cerca oltre 50 milioni di oggetti" aria-label="Cerca" required>
+                </div>
+            </form>
+        </div>
+    </main>    
     <footer class="bg-dark text-white text-center py-2">
         <p>&copy; 2024 All Rights Reserved</p>
     </footer>
