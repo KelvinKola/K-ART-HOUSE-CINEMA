@@ -1,10 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
 header {
     background-color: #333;
     color: #fff;
@@ -47,14 +40,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-main {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 60px;
-}
-
 footer {
     background-color: #333;
     color: #fff;
@@ -71,16 +56,34 @@ footer {
 
 /*BARRA DI RICERCA*/-------------------------------------------------------------------------------------------------------------------
 
+/* Ensure the wrapper takes full viewport height and width */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;  /* Ensure html and body also take full height */
+}
+
 .searchbar-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Imposta l'altezza a 100% della viewport per centrare verticalmente */
-    background-image: url('img/your-background-image.jpg'); /* Immagine di sfondo se la desideri */
-    background-size: cover;
-    background-position: center;
+    text-align: center;
 }
 
+.searchbar-container h1{
+    display: flex;
+    justify-content: center;
+    font-size:38px;
+    padding: 10px;
+}
+.searchbar-container p {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-style: oblique;
+    padding-bottom: 20px;
+}
 .search-icon input[type="search"] {
     width: 100%;
     padding: 15px 20px 15px 40px; /* Adjust left padding to make room for the icon */
