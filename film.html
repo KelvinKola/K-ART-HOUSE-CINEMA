@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K-Art House Cinema - Movies</title>
+    
+        <!--METADATA DEL DUBLIN CORE-->
+        <meta name="DC.Title" content="K-Art House Cinema">
+        <meta name="DC.Creator" content="Kelvin Kola">
+        <meta name="DC.Subject" content="Biblioteca digitale riguardante Film di cinema d'autore">
+        <meta name="DC.Description" content="Questo sito presenta film d'autore e profili di registi.">
+        <meta name="DC.Date" content="06-01-2024">
+        <meta name="DC.Type" content="Testi, Immagini, Video">
+        <meta name="DC.Format" content="text/html">
+        <meta name="DC.Identifier" content="https://kelvinkola.github.io/K-ART-HOUSE-CINEMA/">
+        <meta name="DC.Language" content="it">
+    
     <link rel="stylesheet" href="style/styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    
     <style>
         .movie-details {
             display: none; /* Nasconde i dettagli dei film di default */
@@ -162,10 +175,51 @@
                 </div>
 
                 <!-- DETTAGLI FILM -->
+                 <div id="movie-lily-chou-chou" class="movie-details">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="film.html">Film</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Titolo del Film</li>
+        </ol>
+    </nav>
+
+    <div class="movie-details-container">
+        <div class="movie-image">
+            <img src="" alt="">
+        </div>
+        <div class="movie-description">
+            <h2></h2>
+            <p><strong>Diretto da:</strong></p>
+            <p><strong>Data di rilascio:</strong></p>
+            <p><strong>Incassi:</strong></p>
+            <div style="margin-top: 10px;">
+                <button class="btn btn-secondary" onclick="goBackFilm()">Torna Indietro</button>
+                <button class="btn btn-outline-danger like-button" onclick="fakeLike()">❤️</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="movie-plot">
+        <p></p>
+        <p><h5>Trama:</h5></p>
+        <p></p>
+        <p><h5>Cast:</h5></p>
+        <p></p>
+    </div>
+</div>
+
 
                 <!--LILY CHOU CHOU-->
 
                 <div id="movie-lily-chou-chou" class="movie-details">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item"><a href="film.html">Film</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Titolo del Film</li>
+                        </ol>
+                      </nav>
                     <div class="movie-details-container">
                         <div class="movie-image">
                             <img src="img/lily-chou-chou.jpg" alt="All About Lily Chou-Chou">
@@ -203,6 +257,13 @@
                 <!--PRIMAVERA ESTATE AUTUNNO ETC-->
                 
                 <div id="movie-spring-summer-fall-winter-spring" class="movie-details">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item"><a href="film.html">Film</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Titolo del Film</li>
+                        </ol>
+                      </nav>
                     <div class="movie-details-container">
                         <div class="movie-image">
                             <img src="img/kim-ki-duk-spring-1.jpg" alt="Primavera, Estate, Autunno, Inverno... e ancora Primavera">
@@ -244,6 +305,13 @@
                 <!--FERRO 3-->
 
                 <div id="movie-3-iron" class="movie-details">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item"><a href="film.html">Film</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Titolo del Film</li>
+                        </ol>
+                      </nav>
                     <div class="movie-details-container">
                         <div class="movie-image">
                             <img src="img/kim-ki-duk-3-iron.jpg" alt="Ferro 3">
@@ -278,6 +346,13 @@
                 <!--OLDBOY-->
                 
                 <div id="movie-oldboy" class="movie-details">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item"><a href="film.html">Film</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Titolo del Film</li>
+                        </ol>
+                      </nav>
                     <div class="movie-details-container">
                         <div class="movie-image">
                             <img src="img/park-chan-wook-oldboy.jpg" alt="Oldboy">
@@ -312,6 +387,13 @@
                 <!--PARASITE-->
 
                 <div id="movie-parasite" class="movie-details">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item"><a href="film.html">Film</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Titolo del Film</li>
+                        </ol>
+                      </nav>
                     <div class="movie-details-container">
                         <div class="movie-image">
                             <img src="img/bong-joon-ho-parasite.jpg" alt="Parasite">
@@ -348,6 +430,13 @@
                 <!--MEMORIE DI UN ASSASSINO-->
 
                 <div id="movie-memories-of-murder" class="movie-details">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item"><a href="film.html">Film</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Titolo del Film</li>
+                        </ol>
+                      </nav>
                     <div class="movie-details-container">
                         <div class="movie-image">
                             <img src="img/bong-joon-ho-memories.jpg" alt="Memorie di un assassino">
@@ -382,6 +471,13 @@
                 <!--PIETA'-->
 
                 <div id="movie-pieta" class="movie-details">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item"><a href="film.html">Film</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Titolo del Film</li>
+                        </ol>
+                      </nav>
                     <div class="movie-details-container">
                         <div class="movie-image">
                             <img src="img/kim-ki-duk-pieta.jpg" alt="Pietà">
@@ -416,6 +512,13 @@
                 <!--I'M A CYBORG BUT THAT'S OK-->
 
                 <div id="movie-im-a-cyborg-but-thats-ok" class="movie-details">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item"><a href="film.html">Film</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Titolo del Film</li>
+                        </ol>
+                      </nav>
                     <div class="movie-details-container">
                         <div class="movie-image">
                             <img src="img/park-chan-wook-cyborg.jpg" alt="I'm a Cyborg, But That's OK">
@@ -451,6 +554,14 @@
                 <!--THE HANDMAIDEN-->
 
                 <div id="movie-the-handmaiden" class="movie-details">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item"><a href="film.html">Film</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Titolo del Film</li>
+                        </ol>
+                      </nav>
+
                     <div class="movie-details-container">
                         <div class="movie-image">
                             <img src="img/park-chan-wook-handmaiden.jpg" alt="The Handmaiden - Mademoiselle">
@@ -495,6 +606,11 @@
         <p>&copy; 2024 All Rights Reserved</p>
     </footer>
 
+    <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

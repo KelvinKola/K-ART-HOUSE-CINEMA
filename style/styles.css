@@ -15,10 +15,11 @@ html {
 }
 
 body, html {
+    display: block;
     height: 100%;  
 }
 
-/* Header Styling */
+/* STILE HEADER */
 header {
     background-color: #333;
     color: #fff;
@@ -55,7 +56,8 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Footer Styling */
+/* STILE FOOTER */
+
 footer {
     background-color: #333;
     color: #fff;
@@ -68,11 +70,12 @@ footer {
     height: 35px;
 }
 
-/* Hero Section */
+/* SEZIONE HERO */
+
 .hero {
     position: relative;
     min-height: 400px; /* Make the hero section flexible */
-    background-image: url('background-image.jpg');
+    background-image: url(/img/Searchbar-bg.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -83,7 +86,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%; /* Full height for the background */
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 204, 255, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,40 +116,8 @@ footer {
     border: none;
     border-radius: 5px;
 }
+/* BARRA DI RICERCA - HOMEPAGE */
 
-/* Slider Section */
-.swiper {
-    width: 50%;
-    height: 400px; /* Adjust the height of the slider */
-    margin: 50px auto; /* Added margin on top to separate it from the hero */
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: auto;
-}
-
-.caption {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 0;
-}
-
-/* Search Bar Styling */
 .searchbar-container {
     display: flex;
     justify-content: center;
@@ -154,31 +125,20 @@ footer {
     text-align: center;
 }
 
-.searchbar-container h1{
-    font-size: 38px;
-    padding: 10px;
+
+/* SLIDER IMMAGINI*/
+
+.carousel-item img{
+    height: 400px;
+    width: auto;
 }
 
-.searchbar-container p {
-    font-size: 18px;
-    font-style: oblique;
-    padding-bottom: 20px;
-}
-
-.search-icon input[type="search"] {
-    width: 100%;
-    padding: 15px 20px 15px 40px;
-    font-size: 18px;
-    border: 1px solid #ccc;
-    border-radius: 50px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    outline: none;
-    transition: box-shadow 0.3s ease;
-}
-
-/* Movie and Author Pages Styling (Film and Autori Sections) */
+-----------------------------------------------------------------------------------------------------------------------
+/* STILI DELLE PAGINE -AUTORI E -FILM */
+-----------------------------------------------------------------------------------------------------------------------
 
 /* Film Listing Section */
+
 .movie-details-container {
     display: flex;
     align-items: flex-start;
@@ -212,7 +172,8 @@ footer {
     align-self: flex-start;
 }
 
-/* Author Biography Section */
+/* BIOGRAFIA AUTORI*/
+
 .author-details-container {
     display: flex;
     flex-direction: row;
