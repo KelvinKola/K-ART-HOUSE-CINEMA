@@ -1,3 +1,24 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+html {
+    overflow-y: scroll; /* Keep the scrollbar always visible */
+}
+
+body, html {
+    height: 100%;  
+}
+
+/* Header Styling */
 header {
     background-color: #333;
     color: #fff;
@@ -10,19 +31,13 @@ header .logo {
 }
 
 .logo {
-    display: inline-block; /* Assicura che il logo non sia trattato come un blocco completo */
-    max-width: auto; 
+    display: inline-block;
     height: auto; 
 }
 
 a.logo-link {
-    display: inline-block; /* Assicura che il link non influenzi il layout */
-    text-decoration: none; /* Rimuove eventuali effetti di decorazione del link */
-}
-
-
-html {
-    overflow-y: scroll; /* FA SI CHE LA BARRA DI SCORRIMENTO NON SPARISCA */
+    display: inline-block;
+    text-decoration: none;
 }
 
 nav ul {
@@ -40,6 +55,7 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Footer Styling */
 footer {
     background-color: #333;
     color: #fff;
@@ -52,18 +68,85 @@ footer {
     height: 35px;
 }
 
-/*CSS RIGUARDANTI L'HOMEPAGE*/---------------------------------------------------------------------------------------------------------
-
-/*BARRA DI RICERCA*/-------------------------------------------------------------------------------------------------------------------
-
-/* Ensure the wrapper takes full viewport height and width */
-
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;  /* Ensure html and body also take full height */
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 400px; /* Make the hero section flexible */
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full height for the background */
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    color: white;
+    text-align: center;
+    max-width: 600px;
+    margin-top: 50px; /* Ensure spacing from the top */
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-content input {
+    padding: 10px;
+    width: 100%;
+    max-width: 800px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Slider Section */
+.swiper {
+    width: 50%;
+    height: 400px; /* Adjust the height of the slider */
+    margin: 50px auto; /* Added margin on top to separate it from the hero */
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 0;
+}
+
+/* Search Bar Styling */
 .searchbar-container {
     display: flex;
     justify-content: center;
@@ -72,21 +155,19 @@ body, html {
 }
 
 .searchbar-container h1{
-    display: flex;
-    justify-content: center;
-    font-size:38px;
+    font-size: 38px;
     padding: 10px;
 }
+
 .searchbar-container p {
-    display: flex;
-    justify-content: center;
     font-size: 18px;
     font-style: oblique;
     padding-bottom: 20px;
 }
+
 .search-icon input[type="search"] {
     width: 100%;
-    padding: 15px 20px 15px 40px; /* Adjust left padding to make room for the icon */
+    padding: 15px 20px 15px 40px;
     font-size: 18px;
     border: 1px solid #ccc;
     border-radius: 50px;
@@ -95,144 +176,64 @@ body, html {
     transition: box-shadow 0.3s ease;
 }
 
-/*DESCRIZIONE A TENDINA DEI FILM NELLA PAGINA FILM.HTML*/------------------------------------------------------------------------------
+/* Movie and Author Pages Styling (Film and Autori Sections) */
 
+/* Film Listing Section */
 .movie-details-container {
     display: flex;
     align-items: flex-start;
     margin-top: 20px;
 }
+
 .movie-image {
     flex: 0 0 auto;
     margin-right: 15px;
     margin-bottom: 30px;
 }
+
 .movie-image img {
     max-width: 100%;
     height: auto;
-    width: 300px; /* Aumenta la larghezza dell'immagine */
-    display: block;
+    width: 300px;
 }
+
 .movie-description {
     max-width: 600px;
-    text-align: left; /* Allinea il testo a sinistra */
+    text-align: left;
 }
+
 .movie-description h2 {
-    font-size: 24px; /* Dimensione del titolo */
-    margin: 0 0 10px 0; /* Rimuove margini aggiuntivi */
-    padding-left: 0; /* Rimuove qualsiasi padding a sinistra */
-    text-align: left; /* Allinea il testo a sinistra */
+    font-size: 24px;
+    margin: 0 0 10px 0;
 }
+
 .movie-description button {
-    margin-top: auto; /* Spinge il bottone in basso */
-    align-self: flex-start; /* Allinea il bottone a sinistra (opzionale) */
-}
-.like-button {
-    margin-left: 10px;
-    cursor: pointer;
+    margin-top: auto;
+    align-self: flex-start;
 }
 
-/*BIOGRAFIA A TENDINA DEGLI AUTORI NELLA PAGINA AUTORI.HTML*/------------------------------------------------------------------------
-
+/* Author Biography Section */
 .author-details-container {
     display: flex;
-    flex-direction: row; /* Dispone gli elementi in una riga */
-    align-items: center; /* Allinea verticalmente l'immagine e il testo */
-    margin-bottom: 20px; /* Aggiunge spazio sotto il contenitore */
-}
-
-.author-details {
-    display: none; /* Nascondi i dettagli di default */
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .author-image {
-    margin-right: 20px; /* Spazio tra l'immagine e il testo */
-    flex-shrink: 0; /* Impedisce all'immagine di ridursi */
+    margin-right: 20px;
 }
 
 .author-info {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Spinge il contenuto di author-info in alto */
+    justify-content: flex-start;
 }
+
 .author-info h3 {
     padding-bottom: 10px;
 }
+
 .author-info p {
-    margin-bottom: 5px; /* Riduce lo spazio tra i paragrafi */
+    margin-bottom: 5px;
 }
-.author-bio {
-    margin-bottom: 60px; /* Aggiungi 20px di margine inferiore */
-}
-.back-button-container {
-    text-align: left; /* Allinea il pulsante a destra */
-    margin-bottom: 20px; /* Spazio sotto il pulsante */
-    margin-top: -10px; /* Sposta il pulsante più in alto */
-}
-
-/*FILM PIACUITI NELLA PAGINA "PROFILO"*/---------------------------------------------------------------------------------------------
-
-.film-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.film-container div {
-    text-align: center;
-}
-
-.film-container img {
-    width: 150px;
-    height: 225px;
-    object-fit: cover;
-}
-
-.film-container p {
-    font-size: 20px;
-    white-space: nowrap;         /* Evita che il testo vada a capo */
-    overflow: hidden;            /* Nasconde il testo che eccede */
-    text-overflow: ellipsis;     /* Mostra i puntini di sospensione per il testo troncato */
-    max-width: 100px;            /* Imposta la larghezza massima del contenitore del testo */
-}
-
-[title] {
-    position: relative;
-}
-
-[title]::after {
-    content: attr(title);
-    position: absolute;
-    left: 50%;
-    bottom: 125%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 5px;
-    border-radius: 3px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-[title]:hover::after {
-    opacity: 1;
-}
-
-.film-container p a {
-    color: inherit; /* Mantiene il colore del testo */
-    text-decoration: none; /* Rimuove la sottolineatura del link */
-}
-
-.film-container p a:hover {
-    text-decoration: underline; /* Facoltativo: aggiunge una sottolineatura solo al passaggio del mouse */
-}
-
-
-
-
-
-
-
-

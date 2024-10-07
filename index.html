@@ -16,6 +16,8 @@
     <meta name="DC.Identifier" content="https://kelvinkola.github.io/K-ART-HOUSE-CINEMA/">
     <meta name="DC.Language" content="it">
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -37,19 +39,30 @@
         </div>
     </header>
     <main id="Homepage">
-        <div class="background-wrapper">  <!-- New wrapper for background -->
-            <div class="searchbar-container">
-                <h1>Biblioteca Digitale sul cinema d'arte Coreano</h1>
-                <p>Soddisfa il tuo desiderio di trovare nuovi film di questo genere!</p>
-                <form action="search.html" method="GET">
-                    <div class="search-icon">
-                        <input type="search" name="q" placeholder="Cerca il titolo di un film" aria-label="Cerca" required>
-                    </div>
-                </form>
+        <section class="hero">
+            <div class="overlay">
+                <div class="hero-content">
+                    <h1>Biblioteca digitale sul cinema d'arte Coreano</h1>
+                    <p>Soddisfa il tuo desiderio di trovare nuovi film di questo genere! Inoltre puoi scambiare opinioni sul tuo film preferito con gli altri utenti.</p>
+                    <input type="text" placeholder="Cerca...">
+                </div>
             </div>
-        </div>
+        </section>
+    
+        <!-- Add some margin to avoid overlapping -->
+        <section class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="image1.jpg" alt="Slide 1"><p class="caption">Caption 1</p></div>
+                <div class="swiper-slide"><img src="image2.jpg" alt="Slide 2"><p class="caption">Caption 2</p></div>
+                <div class="swiper-slide"><img src="image3.jpg" alt="Slide 3"><p class="caption">Caption 3</p></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </section>
     </main>
-        <footer class="bg-dark text-white text-center py-2">
+
+    <footer class="bg-dark text-white text-center py-2">
         <p>&copy; 2024 All Rights Reserved</p>
     </footer>
     <script src="js/scripts.js"></script>

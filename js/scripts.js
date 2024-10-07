@@ -212,3 +212,16 @@ function logout() {
 function fakeLike() {
     alert("Hai cliccato su Mi Piace!");
 }
+/*FUNZIONA SLIDE IMMAGINI*/
+
+var swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  loop: true,
+});
