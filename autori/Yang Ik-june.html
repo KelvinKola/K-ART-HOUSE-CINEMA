@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yang Ik-june</title>
+    
+    <!--METADATA DEL DUBLIN CORE-->
+    <meta name="DC.Title" content="K-Art House Cinema">
+    <meta name="DC.Creator" content="Kelvin Kola">
+    <meta name="DC.Subject" content="Biblioteca digitale riguardante Film di cinema d'autore">
+    <meta name="DC.Description" content="Questo sito presenta film d'autore e profili di registi.">
+    <meta name="DC.Date" content="06-01-2024">
+    <meta name="DC.Type" content="Testi, Immagini, Video">
+    <meta name="DC.Format" content="text/html">
+    <meta name="DC.Identifier" content="https://kelvinkola.github.io/K-ART-HOUSE-CINEMA/">
+    <meta name="DC.Language" content="it">
+    
+    <link rel="stylesheet" href="../style/stileautori.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/website-logo2.png" class="logo" alt="Niche Logo">
+            </a>            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../film.html">Film</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../autori.html">Autori</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../profilo.html">Profilo</a></li>
+                </ul>
+            </nav>
+            <form class="form-inline" onsubmit="return searchCatalog()">
+                <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mt-4" style="padding-bottom: 60px;">
+
+        <!--YANG IK-JUNE-->
+        
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="../autori.html">Autori</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Yang Ik-june</li>
+            </ol>
+        </nav>
+
+        <div id="yang-ik-june-details" class="author-details">
+            <div class="back-button-container">
+                <button class="btn btn-secondary" onclick="window.location.href='../autori.html'">Indietro</button>
+            </div>
+
+            <div class="author-details-container" style="display: flex; gap: 20px;">
+                <div class="author-image">
+                    <img src="../img/yang-ik-june.jpg" alt="Yang Ik-june" style="width: 200px;">
+                </div>
+                <div class="author-info">
+                    <h3>Yang Ik-june</h3>
+                    <p><h5>Nascita:</h5> 19 Ottobre 1975, <strong>Seul, Corea del Sud</strong></p>
+                </div>
+            </div>
+
+            <div class="author-bio mt-4">
+                <p>Yang Ik-june è un regista, sceneggiatore e attore sudcoreano noto per il suo approccio realistico e crudo ai temi della violenza domestica e dei problemi sociali. Nato il 19 ottobre 1975 a Seul, Yang ha esplorato vari aspetti della condizione umana nei suoi lavori, guadagnandosi un ampio seguito di critica e pubblico.</p>
+                <p><h5>Formazione e Inizio Carriera</h5>Yang Ik-june ha studiato alla Chung-Ang University di Seoul, dove si è specializzato in recitazione. Dopo la laurea, ha iniziato la sua carriera nel cinema come attore e sceneggiatore, affermandosi per il suo talento interpretativo e il suo impegno nel raccontare storie autentiche e provocatorie.</p>
+                <p><h5>Il Successo di "Breathless"</h5>Il suo debutto come regista è arrivato con <strong>"Breathless"</strong> (2009), un film indipendente in cui esplora il ciclo di violenza domestica attraverso il personaggio di Sang-hoon, interpretato dallo stesso Yang. Il film ha riscosso un enorme successo internazionale e ha vinto numerosi premi nei festival cinematografici di tutto il mondo. "Breathless" è stato lodato per la sua rappresentazione realistica della vita urbana in Corea e per la profondità dei suoi personaggi.</p>
+                <p><h5>Stile e Tematiche</h5>Yang Ik-june è noto per il suo stile cinematografico realistico e la sua rappresentazione cruda delle problematiche sociali. I suoi film affrontano spesso temi di violenza, isolamento e redenzione, e sono caratterizzati da un'intensa introspezione emotiva dei personaggi. Yang esplora la complessità della condizione umana, portando lo spettatore a riflettere su questioni morali e sociali attraverso una lente intima e personale.</p>
+                <p><h5>Impatto e Influenza</h5>Pur mantenendo un basso profilo nella vita privata, Yang Ik-june è ampiamente rispettato nel panorama del cinema coreano e internazionale. La sua opera continua a ispirare una nuova generazione di registi indipendenti, e il suo contributo al cinema coreano è considerato significativo. Con ogni progetto, Yang sfida i confini del cinema realistico e offre uno sguardo autentico e intransigente sulla società moderna.</p>
+            </div>    
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-2" style="display: block;">
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="../js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

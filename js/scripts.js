@@ -14,37 +14,6 @@ function searchMovies() {
     return false; // Prevent form submission
 }
 
-/*FUNZIONE TASTO DESCRIZIONE PAGINA HOME*/
-
-function toggleDescription(descriptionId) {
-    var description = document.getElementById(descriptionId);
-    if (description) { // Verifica se l'elemento è stato trovato
-        if (description.style.display === "none" || description.style.display === "") {
-            description.style.display = "block";
-        } else {
-            description.style.display = "none";
-        }
-    } else {
-        console.log("Elemento non trovato: " + descriptionId); // Messaggio di errore per il debugging
-    }
-}
-
-/*FUNZIONE COMMENTI PAGINA HOME*/
-
-function addComment() {
-    const username = document.getElementById('username').value.trim(); // Ottieni il nome utente
-    const commentText = document.getElementById('comment-text').value.trim(); // Ottieni il testo del commento
-
-    if (commentText !== "" && username !== "") { // Verifica che entrambi i campi non siano vuoti
-        const commentList = document.getElementById('comments-list');
-        const newComment = document.createElement('li');
-        newComment.className = 'list-group-item';
-        newComment.innerHTML = `<strong>${username}:</strong> ${commentText} <span class="badge badge-success">👍 0</span> <span class="badge badge-danger">👎 0</span>`;
-        commentList.appendChild(newComment);
-        document.getElementById('comment-form').reset(); // Reset del form dopo l'invio
-    }
-}
-
 /*FUNZIONE CERCA CATALOGO*/
 
 function searchCatalog() {
@@ -109,37 +78,24 @@ function viewAllFilms() {
     movieList.style.display = '';
 }
 
+function addComment(event) {
+    event.preventDefault();
 
-/*FUNZIONE PER MOSTRARE/NASCONDERE I DETTAGLI DEL FILM*/
+    // Get the input values
+    const username = document.getElementById('username').value;
+    const commentText = document.getElementById('comment-text').value;
 
-function toggleMovieDetails(movieId) {
-    const movieDetails = document.getElementById(movieId);
-    const movieList = document.querySelector('.table-responsive'); // Seleziona la lista dei film
-    
-    // Nascondi o mostra i dettagli del film
-    if (movieDetails.style.display === 'block') {
-        movieDetails.style.display = 'none';
-        movieList.style.display = ''; // Mostra la lista dei film
-    } else {
-        // Nascondi tutti i blocchi di dettagli dei film
-        const allDetails = document.querySelectorAll('.movie-details');
-        allDetails.forEach(detail => detail.style.display = 'none');
-        
-        // Nascondi la lista dei film
-        movieList.style.display = 'none';
+    // Create new comment element
+    const newComment = document.createElement('div');
+    newComment.classList.add('comment');
+    newComment.innerHTML = `<p><strong>${username}:</strong> ${commentText}</p>`;
 
-        // Mostra solo il blocco di dettagli selezionato
-        movieDetails.style.display = 'block';
-    }
-}
+    // Prepend new comment to the new-comments section (adds to the top)
+    document.getElementById('new-comments').prepend(newComment);
 
-function goBackFilm() {
-    // Codice specifico per tornare indietro nella pagina film
-    const allDetails = document.querySelectorAll('.movie-details');
-    allDetails.forEach(detail => detail.style.display = 'none');
-
-    const movieList = document.querySelector('.table-responsive');
-    movieList.style.display = '';
+    // Clear the form
+    document.getElementById('username').value = '';
+    document.getElementById('comment-text').value = '';
 }
 
 
@@ -225,3 +181,9 @@ var swiper = new Swiper(".mySwiper", {
   },
   loop: true,
 });
+
+
+
+
+
+/*TIMELINE*/

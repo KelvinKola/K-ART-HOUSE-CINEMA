@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Oldboy</title>
+        
+        <!--METADATA DEL DUBLIN CORE-->
+        <meta name="DC.Title" content="K-Art House Cinema">
+        <meta name="DC.Creator" content="Kelvin Kola">
+        <meta name="DC.Subject" content="Biblioteca digitale riguardante Film di cinema d'autore">
+        <meta name="DC.Description" content="Questo sito presenta film d'autore e profili di registi.">
+        <meta name="DC.Date" content="06-01-2024">
+        <meta name="DC.Type" content="Testi, Immagini, Video">
+        <meta name="DC.Format" content="text/html">
+        <meta name="DC.Identifier" content="https://kelvinkola.github.io/K-ART-HOUSE-CINEMA/">
+        <meta name="DC.Language" content="it">
+        
+        <link rel="stylesheet" href="../style/stilefilm.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <header class="bg-dark text-white text-center py-1">
+            <div class="container d-flex justify-content-between align-items-center">
+                <a href="../index.html" class="logo-link">
+                    <img src="../img/website-logo2.png" class="logo" alt="Niche Logo">
+                </a>            
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="../film.html">Film</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="../autori.html">Autori</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="../profilo.html">Profilo</a></li>
+                    </ul>
+                </nav>
+                <form class="form-inline" onsubmit="return searchCatalog()">
+                    <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
+                </form>
+            </div>
+        </header>
+
+        <main class="container mt-4" style="padding-bottom: 60px;">
+
+            <!--OLDBOY-->
+            <div id="movie-oldboy" class="movie-details">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../film.html">Film</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Oldboy</li>
+                    </ol>
+                </nav>
+
+                <div class="movie-info" style="display: flex; align-items: flex-start; gap: 20px;">
+                    <div class="movie-image" style="flex-shrink: 0;">
+                        <img src="../img/park-chan-wook-oldboy.jpg" alt="Oldboy">
+                    </div>
+                    <div style="flex: 1; text-align: left;">   
+                        <h2>Oldboy</h2>
+                        <p><strong>Diretto da:</strong> Park Chan-wook</p>
+                        <p><strong>Data di rilascio:</strong> 21 Novembre 2003</p>
+                        <p><strong>Incassi:</strong> $15 milioni</p>
+                        <div class="tasto-indietro">
+                            <button class="btn btn-secondary" onclick="window.location.href='../film.html'">Torna Indietro</button>
+                            <button class="btn btn-outline-danger like-button" onclick="fakeLike()">❤️</button>
+                        </div>
+                        <p><strong>"Oldboy"</strong> è un film del 2003 diretto da Park Chan-wook. È un thriller psicologico intenso e violento, che fa parte della trilogia della vendetta del regista, esplorando i temi della retribuzione, della memoria e della distruzione personale.</p>                            
+                    </div>
+                </div> 
+                
+                <div class="movie-plot">
+                    <p><h5>Trama:</h5></p>
+                    <p>Il film inizia con il protagonista, Oh Dae-su, un uomo comune, che viene improvvisamente rapito e imprigionato in una stanza per quindici anni senza spiegazioni. Durante la prigionia, Dae-su viene nutrito regolarmente e riceve solo una televisione per compagnia, attraverso la quale scopre che sua moglie è stata uccisa e che lui è stato incastrato per l'omicidio. Ossessionato dal desiderio di vendetta, Dae-su si allena fisicamente e mentalmente, mentre cerca di capire chi possa essere il suo carceriere e il motivo di questa punizione. Dopo quindici anni, viene liberato improvvisamente, senza alcuna spiegazione. Una volta fuori, Dae-su riceve un telefono cellulare e denaro, e si mette alla ricerca della verità dietro il suo rapimento. Nel corso delle sue indagini, incontra Mi-do, una giovane donna che lo aiuta nella sua missione. Tuttavia, la ricerca della verità lo porta a scoprire segreti inquietanti e scioccanti legati al suo passato. Il film raggiunge il suo apice in un finale devastante, dove Dae-su scopre l'identità del suo rapitore, Lee Woo-jin, e il motivo della sua vendetta. La rivelazione finale è tanto sorprendente quanto tragica, rivelando una trama di vendetta meticolosa e implacabile, in cui Dae-su è tanto vittima quanto carnefice. La storia si conclude con un'oscura riflessione sulla natura ciclica della vendetta e sul devastante costo psicologico e morale di essa.</p>
+                    <p>Un thriller psicologico crudo e avvincente che esplora il tema della vendetta attraverso una narrazione complessa e disturbante. Il film segue Oh Dae-su nella sua ricerca disperata per scoprire chi lo ha imprigionato per quindici anni e perché, svelando un intricato piano di vendetta che culmina in un finale sconvolgente. Park Chan-wook utilizza una regia stilisticamente audace e una narrazione intensa per esplorare il lato oscuro della natura umana, la memoria e le conseguenze devastanti della vendetta. Con la sua violenza viscerale e le sue svolte narrative, "Oldboy" è diventato un'opera di culto nel cinema mondiale.</p>    
+                    <p><h5 style="padding-bottom: 20px;">Cast:</h5>
+                        <ul>
+                            <li><strong>Choi Min-sik</strong> interpreta Oh Dae-su</li>
+                            <li><strong>Yoo Ji-tae</strong> interpreta Lee Woo-jin</li>
+                            <li><strong>Kang Hye-jung</strong> interpreta Mi-do</li>
+                            <li><strong>Kim Byung-ok</strong> interpreta Mr. Han</li>
+                            <li><strong>Oh Dal-su</strong> interpreta Park Cheol-woong</li>
+                            <li><strong>Ji Dae-han</strong> interpreta No Joo-hwan</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+            <!--SEZIONE COMMENTI-->
+            <div class="comments-section">
+                <h3>Commenti</h3>
+                <!-- Commenti esistenti qui -->
+                <div id="new-comments"></div>
+                <form class="comment-form" onsubmit="addComment(event)">
+                    <label for="username">Nome:</label>
+                    <input type="text" id="username" required>
+                    <label for="comment-text">Commento:</label>
+                    <textarea id="comment-text" rows="3" required></textarea>
+                    <button type="submit" class="btn btn-primary mt-2">Posta Commento</button>
+                </form>
+            </div>
+            
+        </main>
+
+        <footer class="bg-dark text-white text-center py-2" style="display: block;">
+            <p>&copy; 2024 All Rights Reserved</p>
+        </footer>
+
+        <!-- jQuery, Popper.js, Bootstrap JS -->
+        <script src="../js/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

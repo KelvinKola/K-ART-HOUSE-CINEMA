@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathless</title>
+    
+    <!--METADATA DEL DUBLIN CORE-->
+    <meta name="DC.Title" content="K-Art House Cinema">
+    <meta name="DC.Creator" content="Kelvin Kola">
+    <meta name="DC.Subject" content="Biblioteca digitale riguardante Film di cinema d'autore">
+    <meta name="DC.Description" content="Questo sito presenta film d'autore e profili di registi.">
+    <meta name="DC.Date" content="06-01-2024">
+    <meta name="DC.Type" content="Testi, Immagini, Video">
+    <meta name="DC.Format" content="text/html">
+    <meta name="DC.Identifier" content="https://kelvinkola.github.io/K-ART-HOUSE-CINEMA/">
+    <meta name="DC.Language" content="it">
+    
+    <link rel="stylesheet" href="../style/stilefilm.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/website-logo2.png" class="logo" alt="Niche Logo">
+            </a>            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../film.html">Film</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../autori.html">Autori</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../profilo.html">Profilo</a></li>
+                </ul>
+            </nav>
+            <form class="form-inline" onsubmit="return searchCatalog()">
+                <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mt-4" style="padding-bottom: 60px;">
+
+        <!--BREATHLESS-->
+        <div id="movie-breathless" class="movie-details">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="../film.html">Film</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Breathless</li>
+                </ol>
+            </nav>
+
+            <div class="movie-info" style="display: flex; align-items: flex-start; gap: 20px;">
+                <div class="movie-image" style="flex-shrink: 0;">
+                    <img src="../img/yang-ik-june-breathless.jpg" alt="Breathless">
+                </div>
+                <div style="flex: 1; text-align: left;">   
+                    <h2>Breathless</h2>
+                    <p><strong>Diretto da:</strong> Yang Ik-june</p>
+                    <p><strong>Data di rilascio:</strong> 16 Aprile 2009</p>
+                    <p><strong>Incassi:</strong> $200,000</p>
+                    <div class="tasto-indietro">
+                        <button class="btn btn-secondary" onclick="window.location.href='../film.html'">Torna Indietro</button>
+                        <button class="btn btn-outline-danger like-button" onclick="fakeLike()">❤️</button>
+                    </div>
+                    <p><strong>"Breathless"</strong> è un film del 2009 diretto da Yang Ik-june. Questo potente dramma esplora la violenza domestica e le dinamiche familiari attraverso una storia ruvida e commovente ambientata nella periferia sudcoreana.</p>                            
+                </div>
+            </div> 
+            
+            <div class="movie-plot">
+                <p><h5>Trama:</h5></p>
+                <p>Il film <strong>Breathless</strong> segue la vita tormentata di <strong>Sang-hoon</strong>, un esattore di debiti che è cresciuto in un ambiente familiare difficile e violento. Sang-hoon è segnato profondamente da traumi infantili dovuti agli abusi subiti in famiglia, che lo hanno reso un adulto rabbioso e problematico, incapace di lasciarsi alle spalle il dolore e la rabbia repressa. Il suo lavoro come esattore lo porta spesso a confrontarsi con situazioni di violenza e a sfogare la propria frustrazione su chi lo circonda, mantenendo un comportamento brutale che sembra essere la sua unica forma di sopravvivenza emotiva.</p>
+                <p>La svolta avviene quando incontra per caso <strong>Yeon-hee</strong>, una giovane ragazza delle superiori che proviene anch'essa da una famiglia disfunzionale e caotica. Nonostante le differenze di età e di carattere, i due sviluppano un legame inaspettato. Yeon-hee, che mostra una sorprendente resilienza e maturità nonostante le difficoltà della sua vita, riesce pian piano a far emergere un lato più umano di Sang-hoon. Il loro rapporto diventa una sorta di ancora, offrendo a entrambi la possibilità di esplorare le proprie ferite, di condividere le proprie sofferenze e di iniziare un percorso di guarigione.</p>
+                <p>Attraverso il loro legame, il film esplora temi di <strong>redenzione</strong> e del ciclo di <strong>violenza</strong> e <strong>abuso</strong> che spesso si tramanda di generazione in generazione. Entrambi i personaggi, sebbene segnati in modo diverso dalle loro esperienze, cercano di rompere la catena di dolore che li imprigiona. Sang-hoon e Yeon-hee, confrontandosi con il passato e con le loro emozioni, trovano lentamente il coraggio di affrontare la vita con un atteggiamento più aperto e di riscoprire il significato di <strong>compassione</strong> e <strong>speranza</strong>.</p>
+                <p><strong>Breathless</strong> non risparmia realismo nel rappresentare la vita urbana e la durezza delle condizioni sociali, offrendo uno sguardo crudo sulla <strong>violenza domestica</strong> e sugli effetti psicologici che essa provoca. Con una regia e una narrazione senza compromessi, il film porta sullo schermo un intenso dramma umano, in cui i protagonisti lottano per affrancarsi da un destino apparentemente segnato, cercando di costruirsi una nuova possibilità di vita nonostante le cicatrici che li accompagnano.</p>
+                <p><h5 style="padding-bottom: 20px;">Cast:</h5>
+                    <li><strong>Yang Ik-june</strong> interpreta Sang-hoon</li>
+                    <li><strong>Kim Kkobbi</strong> interpreta Yeon-hee</li>
+                    <li><strong>Lee Hwan</strong> interpreta Hwan</li>
+                    <li><strong>Park Jeong-soon</strong> interpreta la nonna di Yeon-hee</li>
+                    <li><strong>Kim Hee-soo</strong> interpreta il fratello di Yeon-hee</li>
+                </p>
+            </div>
+        </div>
+
+        <!--SEZIONE COMMENTI-->
+        <div class="comments-section">
+            <h3>Commenti</h3>
+            <!-- Commenti esistenti qui -->
+            <div id="new-comments"></div>
+            <form class="comment-form" onsubmit="addComment(event)">
+                <label for="username">Nome:</label>
+                <input type="text" id="username" required>
+                <label for="comment-text">Commento:</label>
+                <textarea id="comment-text" rows="3" required></textarea>
+                <button type="submit" class="btn btn-primary mt-2">Posta Commento</button>
+            </form>
+        </div>
+        
+    </main>
+
+    <footer class="bg-dark text-white text-center py-2" style="display: block;">
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="../js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

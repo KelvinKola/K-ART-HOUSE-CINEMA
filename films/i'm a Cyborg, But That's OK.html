@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm a Cyborg, But That's OK</title>
+    
+    <!--METADATA DEL DUBLIN CORE-->
+    <meta name="DC.Title" content="K-Art House Cinema">
+    <meta name="DC.Creator" content="Kelvin Kola">
+    <meta name="DC.Subject" content="Biblioteca digitale riguardante Film di cinema d'autore">
+    <meta name="DC.Description" content="Questo sito presenta film d'autore e profili di registi.">
+    <meta name="DC.Date" content="06-01-2024">
+    <meta name="DC.Type" content="Testi, Immagini, Video">
+    <meta name="DC.Format" content="text/html">
+    <meta name="DC.Identifier" content="https://kelvinkola.github.io/K-ART-HOUSE-CINEMA/">
+    <meta name="DC.Language" content="it">
+    
+    <link rel="stylesheet" href="../style/stilefilm.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/website-logo2.png" class="logo" alt="Niche Logo">
+            </a>            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../film.html">Film</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../autori.html">Autori</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../profilo.html">Profilo</a></li>
+                </ul>
+            </nav>
+            <form class="form-inline" onsubmit="return searchCatalog()">
+                <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mt-4" style="padding-bottom: 60px;">
+
+        <!--I'M A CYBORG BUT THAT'S OK-->
+        <div id="movie-im-a-cyborg-but-thats-ok" class="movie-details">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="../film.html">Film</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">I'm a Cyborg, But That's OK</li>
+                </ol>
+            </nav>
+
+            <div class="movie-info" style="display: flex; align-items: flex-start; gap: 20px;">
+                <div class="movie-image" style="flex-shrink: 0;">
+                    <img src="../img/park-chan-wook-cyborg.jpg" alt="I'm a Cyborg, But That's OK">
+                </div>
+                <div style="flex: 1; text-align: left;">   
+                    <h2>I'm a Cyborg, But That's OK</h2>
+                    <p><strong>Diretto da:</strong> Park Chan-wook</p>
+                    <p><strong>Data di rilascio:</strong> 7 Dicembre 2006</p>
+                    <p><strong>Incassi:</strong> $8.3 milioni</p>
+                    <div class="tasto-indietro">
+                        <button class="btn btn-secondary" onclick="window.location.href='../film.html'">Torna Indietro</button>
+                        <button class="btn btn-outline-danger like-button" onclick="fakeLike()">❤️</button>
+                    </div>
+                    <p><strong>"I'm a Cyborg, But That's OK"</strong> è un film del 2006 diretto da Park Chan-wook. È una commedia romantica surreale con toni drammatici, che esplora temi come l'alienazione, la malattia mentale e l'accettazione di sé, attraverso una narrazione bizzarra e visivamente ricca.</p>                            
+                </div>
+            </div> 
+            
+            <div class="movie-plot">
+                <p><h5>Trama:</h5></p>
+                <p>Il film racconta la storia di Young-goon, una giovane donna che crede di essere un cyborg. Dopo aver cercato di "ricaricarsi" inserendo dei cavi elettrici nel suo corpo, viene internata in un ospedale psichiatrico. Qui, Young-goon rifiuta di mangiare, convinta che il cibo umano non sia adatto a un cyborg come lei e che debba invece essere alimentata con batterie. Nel manicomio, Young-goon incontra una serie di personaggi eccentrici, ciascuno con le proprie stravaganti illusioni.</p>
+                <p>Tra questi c'è Il-soon, un giovane paziente che crede di poter rubare le caratteristiche e le abilità delle persone. Nonostante il suo distacco emotivo, Il-soon si affeziona a Young-goon e decide di aiutarla. Inizia a entrare nel suo mondo immaginario, cercando di farle accettare il cibo attraverso un delicato inganno: finge di installare un "dispositivo di ricarica" che le permette di nutrirsi senza compromettere la sua identità di cyborg.</p>
+                <p>Mentre Il-soon e Young-goon si avvicinano, il film esplora la loro crescente connessione emotiva, che li porta a superare le loro alienazioni. Il-soon impara ad affrontare le sue paure, mentre Young-goon inizia a comprendere l'importanza di accettare la propria umanità.</p>
+                <p>Una favola moderna ambientata in un mondo surreale, che affronta il tema della malattia mentale con delicatezza e umorismo. La storia di Young-goon e Il-soon è un viaggio attraverso l'alienazione e la follia, ma anche una storia d'amore in cui i protagonisti imparano ad accettarsi per ciò che sono. Park Chan-wook utilizza una regia visivamente inventiva e uno stile narrativo che mescola realtà e fantasia per esplorare la fragilità umana e la ricerca di connessione. Nonostante i suoi temi oscuri, il film mantiene un tono leggero e poetico, offrendo una riflessione toccante e originale sull'identità e l'amore.</p>    
+                <p><h5 style="padding-bottom: 20px;">Cast:</h5>
+                    <ul>
+                        <li><strong>Im Soo-jung</strong> interpreta Cha Young-goon</li>
+                        <li><strong>Rain (Jung Ji-hoon)</strong> interpreta Park Il-soon</li>
+                        <li><strong>Choi Hee-jin</strong> interpreta Choi Seul-gi</li>
+                        <li><strong>Lee Yong-nyeo</strong> interpreta la Nonna di Young-goon</li>
+                        <li><strong>Kim Byeong-ok</strong> interpreta il Dottore</li>
+                        <li><strong>Park Jun-myun</strong> interpreta la Capo infermiera</li>
+                        <li><strong>Lee Myung-seok</strong> interpreta l'Infermiera</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <!--SEZIONE COMMENTI-->
+        <div class="comments-section">
+            <h3>Commenti</h3>
+            <!-- Commenti esistenti qui -->
+            <div id="new-comments"></div>
+            <form class="comment-form" onsubmit="addComment(event)">
+                <label for="username">Nome:</label>
+                <input type="text" id="username" required>
+                <label for="comment-text">Commento:</label>
+                <textarea id="comment-text" rows="3" required></textarea>
+                <button type="submit" class="btn btn-primary mt-2">Posta Commento</button>
+            </form>
+        </div>
+        
+    </main>
+
+    <footer class="bg-dark text-white text-center py-2" style="display: block;">
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="../js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+</body>
+</html>

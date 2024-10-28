@@ -17,7 +17,8 @@
     <meta name="DC.Language" content="it">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/stilehome.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 <body>
@@ -39,53 +40,126 @@
 
     <main id="Homepage" class="main">
 
-        <section class="hero">
-            <div class="overlay">
-                <div class="hero-content">
-                    <h1>Biblioteca digitale sul cinema d'arte Coreano</h1>
-                    <p>Soddisfa il tuo desiderio di trovare nuovi film di questo genere! Inoltre puoi scambiare opinioni sul tuo film preferito con gli altri utenti.</p>
-                    <input type="text" placeholder="Cerca...">
+      <section class="hero" style="background-image: url(img/Searchbar-bg.jpg);">
+        <div class="overlay">
+           <div class="hero-content">
+              <h1>Biblioteca digitale sul cinema d'autore Coreano</h1>
+              <p>Entra nel mondo dell' Art-House Cinema!</p>
+              <input type="text" placeholder="Cerca...">
+              <h6>K-Niche è un sito web ideato per avvicinare il maggior numero di utenti al mondo del cinema d'autore principalmente Coreano. Grazie alla possibiltà di interazione tra gli utenti, il sito non solo presenta alcuni dei registi più influenti sul campo, ma diventa una vera e propria community per gli amanti di questo cinema di nicchia.</h6>
+           </div>
+        </div>
+      </section>
+
+        <!--TIMELINE-->
+
+        <div class="container mt-4" style="padding-bottom: 20px;">
+            <h3>Timeline dei Film</h3>
+            <canvas id="timelineChart" width="400" height="80"></canvas>
+        </div> 
+        
+         <!--CAROSELLO-->
+
+         <!-- Sezione Carousel con testo di fianco a ogni immagine -->
+        <div class="container-fluid">
+            <div class="row mt-2">
+                <!-- Primo Carosello -->
+                <div class="col-md-6">
+                    <h1 style="padding-left: 17%;">Notizie</h1>
+                    <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <img src="img/bong-joon-ho-mickey-17.jpg" class="d-block mx-auto" alt="Spring, Summer, Fall, Winter... and Spring">
+                                    </div>
+                                    <div class="col-6">
+                                        <p>L'atteso film di Bong Joon-Ho, *Mickey17*, è stato posticipato a gennaio 2025, generando speculazioni su presunti problemi di produzione e divergenze con Warner Bros. Il regista ha chiarito che, come per *Okja*, ha mantenuto il controllo sul montaggio finale, descrivendo il processo come rispettoso nonostante discussioni creative. Robert Pattinson ha elogiato l'unicità del progetto, sostenendo che l'insistenza di Bong abbia permesso di realizzare qualcosa di innovativo. Le voci su possibili tensioni con Warner Bros. ricordano il passato contrasto di Bong con i fratelli Weinstein per *Snowpiercer*.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <img src="img/park-chan-wook-uprising.jpg" class="d-block mx-auto" alt="Memories of Murder">
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Il film coreano *Guerra e rivolta*, intitolato *Uprising* per il pubblico internazionale, è stato lanciato su Netflix l'11 ottobre. Ambientato durante l'invasione giapponese della Corea nel tardo XVI secolo, narra la storia di due amici d’infanzia, divenuti rivali: un servo ribelle, che guida una resistenza, e un ufficiale devoto al re Seonjo. La sceneggiatura è stata scritta da Park Chan-wook e Shin Cheol, con la regia di Kim Sang-man. Interpretato da Gang Dong-won e Cheon Yeong, il film promette un’epica narrazione di conflitto e lealtà sullo sfondo della storia coreana.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <img src="img/kim-ki-duk-news.jpg" class="d-block mx-auto" alt="The Handmaiden">
+                                    </div>
+                                    <div class="col-6">
+                                        <p>L’evento gratuito tenutosi il 4 ottobre presso Sentieri Selvaggi ha celebrato l’uscita del nuovo numero della rivista *Sentieri Selvaggi 21st* e una monografia su Kim Ki-duk, con interventi di Carlo Valeri, Aldo Spiniello e Massimo Causo. La serata si è conclusa con la proiezione del film *Ferro 3 – La casa vuota* di Kim Ki-duk, restaurato e incluso in un recente cofanetto blu-ray dedicato al regista, arricchito da un estratto della monografia.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Secondo Carosello -->
+                <div class="col-md-6">
+                    <h1 style="padding-left: 15%;">Curiosità</h1>
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <img src="img/kim-ki-duk-dream.jpg" class="d-block mx-auto" alt="Parasite">
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Durante le riprese di *Dream*, un incidente quasi fatale per l'attrice protagonista portò Kim Ki-duk a riflettere profondamente sulla sua carriera, descrivendo il cinema come un mondo "immaginario, crudele e dolce allo stesso tempo" che lo aveva reso “l’uomo più triste sulla terra.” Questa esperienza lo ispirò a creare *Arirang*, un film diario che segna il suo ritorno al cinema dopo tre anni di pausa. *Arirang* è un'opera insolita nella sua filmografia e segna la terza presenza del regista a Cannes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <img src="img/park-chan-wook-oldboy 2.jpg" class="d-block mx-auto" alt="Pietà">
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Il film si ispira a un mix affascinante di opere iconiche: il manga *Oldboy* di Garon Tsuchiya, il romanzo classico *Il conte di Montecristo* di Alexandre Dumas e la tragedia greca *Edipo Re* di Sofocle. Questa fusione di riferimenti crea una trama densa e stratificata che esplora vendetta, identità e destino, omaggiando elementi classici e moderni. La scelta di fondere queste influenze porta a un'opera intensa, in cui la psicologia dei personaggi si intreccia con l'epicità della narrazione.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <img src="img/bong-joon-ho-madre.jpg" class="d-block mx-auto" alt="3-Iron">
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Dopo aver conosciuto l’attrice coreana Hye-ja Kim, Bong Joon-ho ha deciso di ideare un film specificamente per lei. Durante la stesura, incontrava spesso l’attrice per assicurarsi che la sceneggiatura valorizzasse appieno le sue capacità. Nel 2009, ha quindi realizzato *Madre*, una storia incentrata su una madre determinata a dimostrare l’innocenza del figlio, accusato di un grave delitto.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <!--CAROSELLO-->
-
-        <div id="carouselExampleIndicators" class="carousel slide mt-2"  data-ride="carousel">
-
-            <!-- Indicatori -->
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-          
-            <!-- Immagini del carosello -->
-            <div class="carousel-inner" >
-              <div class="carousel-item active">
-                <img src="img\kim-ki-duk-spring-2.jpg" class="d-block mx-auto" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/bong-joon-ho-memories.jpg" class="d-block mx-auto" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/park-chan-wook-handmaiden.jpg" class="d-block mx-auto" alt="...">
-              </div>
-            </div>
-          
-            <!-- Controlli -->
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </a>
         </div>
-          
 
+        
+            
     </main>
 
-    <footer class="bg-dark text-white text-center py-2" style="display: block;">
+    <footer class="bg-dark text-white text-center py-1">
         <p>&copy; 2024 All Rights Reserved</p>
     </footer>
 
@@ -94,6 +168,75 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!--SCRIPTS TIMELINE-->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const ctx = document.getElementById('timelineChart').getContext('2d');
+    
+            // Dati dei film
+            const filmData = [
+                { title: "All About Lily Chou Chou", year: 2001 },
+                { title: "Breathless", year: 2009 },
+                { title: "Primavera, Estate, Autunno, Inverno... e ancora Primavera", year: 2003 },
+                { title: "Ferro 3", year: 2004 },
+                { title: "Oldboy", year: 2003 },
+                { title: "Move the Grave", year: 2019 },
+                { title: "Parasite", year: 2019 },
+                { title: "Memorie di un assassino", year: 2003 },
+                { title: "Pietà", year: 2012 },
+                { title: "I'm a Cyborg, But That's OK", year: 2006 },
+                { title: "The Handmaiden", year: 2016 }
+            ];
+    
+            // Configurazione del grafico
+            const data = {
+                datasets: [{
+                    label: 'Film',
+                    data: filmData.map(film => ({ x: film.year, y: 1, title: film.title })),
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    pointRadius: 6
+                }]
+            };
+    
+            const options = {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom',
+                        title: {
+                            display: true,
+                            text: 'Anno di Rilascio'
+                        },
+                        ticks: {
+                            stepSize: 1,
+                            callback: function(value) { return value; }
+                        }
+                    },
+                    y: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.raw.title + " (" + context.raw.x + ")";
+                            }
+                        }
+                    }
+                }
+            };
+    
+            new Chart(ctx, {
+                type: 'scatter',
+                data: data,
+                options: options
+            });
+        });
+        </script>
+    
 
 </body>
 </html>

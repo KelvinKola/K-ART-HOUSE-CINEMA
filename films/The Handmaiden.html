@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Handmaiden - Mademoiselle</title>
+    
+    <!--METADATA DEL DUBLIN CORE-->
+    <meta name="DC.Title" content="K-Art House Cinema">
+    <meta name="DC.Creator" content="Kelvin Kola">
+    <meta name="DC.Subject" content="Biblioteca digitale riguardante Film di cinema d'autore">
+    <meta name="DC.Description" content="Questo sito presenta film d'autore e profili di registi.">
+    <meta name="DC.Date" content="06-01-2024">
+    <meta name="DC.Type" content="Testi, Immagini, Video">
+    <meta name="DC.Format" content="text/html">
+    <meta name="DC.Identifier" content="https://kelvinkola.github.io/K-ART-HOUSE-CINEMA/">
+    <meta name="DC.Language" content="it">
+    
+    <link rel="stylesheet" href="../style/stilefilm.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/website-logo2.png" class="logo" alt="Niche Logo">
+            </a>            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../film.html">Film</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../autori.html">Autori</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../profilo.html">Profilo</a></li>
+                </ul>
+            </nav>
+            <form class="form-inline" onsubmit="return searchCatalog()">
+                <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mt-4" style="padding-bottom: 60px;">
+
+        <!--THE HANDMAIDEN-->
+        <div id="movie-the-handmaiden" class="movie-details">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="../film.html">Film</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">The Handmaiden</li>
+                </ol>
+            </nav>
+
+            <div class="movie-info" style="display: flex; align-items: flex-start; gap: 20px;">
+                <div class="movie-image" style="flex-shrink: 0;">
+                    <img src="../img/park-chan-wook-handmaiden.jpg" alt="The Handmaiden - Mademoiselle">
+                </div>
+                <div style="flex: 1; text-align: left;">   
+                    <h2>The Handmaiden - Mademoiselle</h2>
+                    <p><strong>Diretto da:</strong> Park Chan-wook</p>
+                    <p><strong>Data di rilascio:</strong> 1 Giugno 2016</p>
+                    <p><strong>Incassi:</strong> $37.8 milioni</p>
+                    <div class="tasto-indietro">
+                        <button class="btn btn-secondary" onclick="window.location.href='../film.html'">Torna Indietro</button>
+                        <button class="btn btn-outline-danger like-button" onclick="fakeLike()">❤️</button>
+                    </div>
+                    <p><strong>"The Handmaiden"</strong> (titolo originale: <strong>"Ah-ga-ssi"s</strong>), noto anche come <strong>"Mademoiselle"</strong> in alcuni paesi, è un film del 2016 diretto da Park Chan-wook. È un thriller psicologico elegante e complesso, con elementi di erotismo, basato sul romanzo "Fingersmith" di Sarah Waters, ma ambientato nella Corea degli anni '30, durante il periodo coloniale giapponese.</p>                            
+                </div>
+            </div> 
+            
+            <div class="movie-plot">
+                <p><h5>Trama:</h5></p>
+                <p>Il film è diviso in tre parti, ognuna delle quali offre una prospettiva diversa sulla stessa storia, rivelando strati di inganni e manipolazioni.</p>
+                <ul>
+                    <li><strong>Parte 1:</strong> La giovane Sook-hee, cresciuta in una famiglia di truffatori, viene assunta come cameriera personale (la "handmaiden") della ricca ereditiera giapponese Lady Hideko, che vive isolata in una grande tenuta con il suo zio tirannico, Kouzuki. Tuttavia, Sook-hee è in realtà parte di un piano elaborato da un truffatore che si fa chiamare "Conte Fujiwara". Il piano prevede che Sook-hee convinca Hideko a sposare il Conte, in modo che possano internarla in un manicomio e rubare la sua fortuna. Ma le cose si complicano quando Sook-hee inizia a sviluppare veri sentimenti per Hideko.</li>
+                    <li><strong>Parte 2:</strong> Questa sezione del film racconta la storia dal punto di vista di Hideko, rivelando il suo passato traumatico e la natura abusiva dello zio Kouzuki, che la costringe a leggere romanzi erotici per un pubblico di nobili decadenti. Si scopre che Hideko è più consapevole e calcolatrice di quanto Sook-hee creda, e ha i propri piani per sfuggire al controllo dello zio.</li>
+                    <li><strong>Parte 3:</strong> La parte finale del film intreccia le due prospettive precedenti, portando a una serie di colpi di scena in cui le alleanze cambiano e le vere intenzioni dei personaggi vengono alla luce. Alla fine, Sook-hee e Hideko riescono a ingannare il Conte e lo zio, e fuggono insieme, lasciando dietro di sé una scia di vendetta e libertà conquistata a caro prezzo.</li>
+                </ul>
+                <p>Un thriller avvincente e sensuale che esplora temi di potere, desiderio e inganno. Park Chan-wook costruisce una storia intricata piena di tradimenti e doppi giochi, ambientata in un periodo storico che enfatizza le tensioni tra classi sociali e culture diverse. La regia raffinata e l'attenzione ai dettagli visivi rendono il film un'esperienza cinematografica ricca e immersiva, in cui niente è come sembra e le apparenze ingannano. Con la sua narrazione stratificata e le sue tematiche provocatorie, "The Handmaiden" si afferma come una delle opere più celebrate del cinema contemporaneo, combinando thriller psicologico e melodramma in un modo unico e coinvolgente.</p>    
+                <p><h5 style="padding-bottom: 20px;">Cast:</h5>
+                    <ul>
+                        <li><strong>Kim Min-hee</strong> interpreta Lady Hideko</li>
+                        <li><strong>Kim Tae-ri</strong> interpreta Sook-hee</li>
+                        <li><strong>Ha Jung-woo</strong> interpreta Count Fujiwara</li>
+                        <li><strong>Cho Jin-woong</strong> interpreta Uncle Kouzuki</li>
+                        <li><strong>Kim Hae-sook</strong> interpreta Ms. Sasaki</li>
+                        <li><strong>Moon So-ri</strong> interpreta Lady Hideko (voce narrante nel finale)</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <!--SEZIONE COMMENTI-->
+        <div class="comments-section">
+            <h3>Commenti</h3>
+            <!-- Commenti esistenti qui -->
+            <div id="new-comments"></div>
+            <form class="comment-form" onsubmit="addComment(event)">
+                <label for="username">Nome:</label>
+                <input type="text" id="username" required>
+                <label for="comment-text">Commento:</label>
+                <textarea id="comment-text" rows="3" required></textarea>
+                <button type="submit" class="btn btn-primary mt-2">Posta Commento</button>
+            </form>
+        </div>
+        
+    </main>
+
+
+    <footer class="bg-dark text-white text-center py-2" style="display: block;">
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="../js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
