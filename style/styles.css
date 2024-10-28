@@ -161,3 +161,31 @@ footer {
 #new-comments .comment {
     margin-top: 15px;
 }
+
+/*PAGINA PROFILO*/
+
+/*FILM PIACUITI NELLA PAGINA "PROFILO"*/
+
+.film-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.film-container div {
+    text-align: center;
+}
+
+.film-container img {
+    width: 150px;
+    height: 225px;
+    object-fit: cover;
+}
+
+.film-container p {
+    font-size: 20px;
+    white-space: nowrap;         /* Evita che il testo vada a capo */
+    overflow: hidden;            /* Nasconde il testo che eccede */
+    text-overflow: ellipsis;     /* Mostra i puntini di sospensione per il testo troncato */
+    max-width: 100px;            /* Imposta la larghezza massima del contenitore del testo */
+}
