@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Art House Cinema - Autori</title>
+    
+        <!--METADATA DEL DUBLIN CORE-->
+        <meta name="DC.Title" content="K-Art House Cinema">
+        <meta name="DC.Creator" content="Kelvin Kola">
+        <meta name="DC.Subject" content="Biblioteca digitale riguardante Film di cinema d'autore">
+        <meta name="DC.Description" content="Questo sito presenta film d'autore e profili di registi.">
+        <meta name="DC.Date" content="06-01-2024">
+        <meta name="DC.Type" content="Testi, Immagini, Video">
+        <meta name="DC.Format" content="text/html">
+        <meta name="DC.Identifier" content="https://kelvinkola.github.io/K-ART-HOUSE-CINEMA/">
+        <meta name="DC.Language" content="it">
+    
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="logo-link">
+                <img src="img/website-logo2.png" class="logo" alt="Niche Logo">
+            </a>            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="film.html">Film</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="autori.html">Autori</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="profilo.html">Profilo</a></li>
+                </ul>
+            </nav>
+            <form class="form-inline" onsubmit="return searchCatalog()">
+                <input id="search-bar" class="form-control mr-sm-2" type="Search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+
+            <!--FILTRO AUTORI-->
+
+        <aside class="col-md-3 float-left">
+            <h4>FILTRO:</h4>
+            <div class="form-group">
+                <label for="author-filter">Autori:</label>
+                <select class="form-control" id="author-filter" onchange="filterAuthors()">
+                    <option value="Tutti">Tutti</option>
+                    <option value="Kim Ki-duk">Kim Ki-duk</option>
+                    <option value="Park Chan-wook">Park Chan-wook</option>
+                    <option value="Bong Joon-ho">Bong Joon-ho</option>
+                    <option value="Shunji Iwai">Shunji Iwai</option>
+                    <option value="Yang Ik-june">Yang Ik-june</option>
+                    <option value="Jeong Seung-o">Jeong Seung-o</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rating-filter">Valutazione:</label>
+                <select class="form-control" id="rating-filter" onchange="filterAuthors()">
+                    <option value="Tutti">Tutti</option>
+                    <option value="4.0">4.0</option>
+                    <option value="4.1">4.1</option>
+                    <option value="4.3">4.3</option>
+                    <option value="4.5">4.5</option>
+                    <option value="4.7">4.7</option>
+                    <option value="4.8">4.8</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" onclick="filterAuthors()">Filtro</button>
+            <button class="btn btn-secondary" onclick="viewAllAuthors()">Vedi tutti</button>
+        </aside>
+
+                    <!--LISTA AUTORI-->
+
+        <section class="col-md-9 float-right">
+            <div id="author-details" style="display: none;">
+                <h3 id="author-name"></h3>
+                <img id="author-image" src="" alt="Author Image" style="width: 200px;">
+                <p id="author-works"></p>
+                <button class="btn btn-secondary" onclick="document.getElementById('author-details').style.display='none'; document.getElementById('author-list').style.display='block';">Back to List</button>
+            </div>
+            <table id="author-list" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Valutazione</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="autori/Kim Ki-duk.html">Kim Ki-duk</a></td>
+                        <td>4.5</td>
+                    </tr>
+                    <tr>
+                        <td><a href="autori/Park Chan-wook.html">Park Chan-wook</a></td>
+                        <td>4.7</td>
+                    </tr>
+                    <tr>
+                        <td><a href="autori/Bong Joon-ho.html">Bong Joon-ho</a></td>
+                        <td>4.8</td>
+                    </tr>
+                    <tr>
+                        <td><a href="autori/Shunji Iwai.html">Shunji Iwai</a></td>
+                        <td>4.1</td>
+                    </tr>
+                    <tr>
+                        <td><a href="autori/Yang Ik-june.html">Yang Ik-june</a></td>
+                        <td>4.3</td>
+                    </tr>
+                    <tr>
+                        <td><a href="autori/Jeong Seung-o.html">Jeong Seung-o</a></td>
+                        <td>4.0</td>
+                    </tr>                                        
+                </tbody>
+            </table>
+        
+        </section>
+        
+    </main>
+    <footer class="bg-dark text-white text-center py-2">
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

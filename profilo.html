@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Art House Cinema - Profilo</title>
+    
+        <!--METADATA DEL DUBLIN CORE-->
+        <meta name="DC.Title" content="K-Art House Cinema">
+        <meta name="DC.Creator" content="Kelvin Kola">
+        <meta name="DC.Subject" content="Biblioteca digitale riguardante Film di cinema d'autore">
+        <meta name="DC.Description" content="Questo sito presenta film d'autore e profili di registi.">
+        <meta name="DC.Date" content="06-01-2024">
+        <meta name="DC.Type" content="Testi, Immagini, Video">
+        <meta name="DC.Format" content="text/html">
+        <meta name="DC.Identifier" content="https://kelvinkola.github.io/K-ART-HOUSE-CINEMA/">
+        <meta name="DC.Language" content="it">
+    
+    <link rel="stylesheet" href="style/stileprofilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="logo-link">
+                <img src="img/website-logo2.png" class="logo" alt="Niche Logo">
+            </a>            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="film.html">Film</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="autori.html">Autori</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="profilo.html">Profilo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container mt-4" style="padding-bottom: 60px;">
+        <section style="position: relative;">
+            <button class="btn btn-danger" onclick="logout()" style="position: absolute; top: 10px; right: 10px;">Esci</button>
+            <div style="display: flex; align-items: center;">
+                <img src="img/user-profile.jpg" alt="User Profile Picture" style="width: 200px; height: 200px; border-radius: 50%; margin-right: 20px;">
+                <div>
+                    <h2 style="margin-top: -70px; padding-left: 0;">Profilo Utente</h2>
+                    <p style="margin-left: 0;"><strong>Username:</strong> Kelvin Kola</p>
+                    <p style="margin-left: 0;"><strong>Email:</strong> kelvinkola@example.com</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h4 style="margin-top: 30px">Commenti:</h4>
+            <ul>
+                <li><strong>Primavera, Estate, Autunno, Inverno... e ancora Primavera:</strong> "Questo film manda un messaggio bellissimo."</li>
+                <li><strong>All about Lily Chou Chou:</strong> "Un film che ti lascia pensare a lungo dopo i titoli di coda. Profondo e struggente."</li>
+            </ul>
+        </section>
+
+        <section>
+            <h4 style="margin-top: 30px;margin-bottom: 15px;">Film Preferiti</h4>
+            <div class="film-container">
+                <div>
+                    <img src="img/bong-joon-ho-parasite.jpg" alt="Parasite">
+                    <p>
+                        <a href="films/Parasite.html" title="Parasite">
+                            Parasite
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <img src="img/kim-ki-duk-spring-2.jpg" alt="Primavera, Estate, Autunno, Inverno... e ancora Primavera">
+                    <p>
+                        <a href="films/Primavera, Estate, Autunno, Inverno... e ancora Primavera.html" title="Primavera, Estate, Autunno, Inverno... e ancora Primavera">
+                            Primavera, Estate, Autunno, Inverno... e ancora Primavera
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <img src="img/park-chan-wook-oldboy.jpg" alt="Oldboy">
+                    <p>
+                        <a href="films/Oldboy.html" title="Oldboy">
+                            Oldboy
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <img src="img/lily-chou-chou.jpg" alt="All about Lily Chou Chou">
+                    <p>
+                        <a href="films/All About Lily Chou Chou.html" title="All about Lily Chou Chou">
+                            All about Lily Chou Chou
+                        </a>
+                    </p>
+                </div>
+                        </section>
+        
+    </main>
+    <footer class="bg-dark text-white text-center py-2">
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
