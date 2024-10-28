@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primavera, Estate, Autunno, Inverno... e ancora Primavera</title>
+    
+    <!--METADATA DEL DUBLIN CORE-->
+    <meta name="DC.Title" content="K-Art House Cinema">
+    <meta name="DC.Creator" content="Kelvin Kola">
+    <meta name="DC.Subject" content="Biblioteca digitale riguardante Film di cinema d'autore">
+    <meta name="DC.Description" content="Questo sito presenta film d'autore e profili di registi.">
+    <meta name="DC.Date" content="06-01-2024">
+    <meta name="DC.Type" content="Testi, Immagini, Video">
+    <meta name="DC.Format" content="text/html">
+    <meta name="DC.Identifier" content="https://kelvinkola.github.io/K-ART-HOUSE-CINEMA/">
+    <meta name="DC.Language" content="it">
+    
+    <link rel="stylesheet" href="../style/stilefilm.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/website-logo2.png" class="logo" alt="Niche Logo">
+            </a>            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../film.html">Film</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../autori.html">Autori</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../profilo.html">Profilo</a></li>
+                </ul>
+            </nav>
+            <form class="form-inline" onsubmit="return searchCatalog()">
+                <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mt-4" style="padding-bottom: 60px;">
+
+        <!--PRIMAVERA ESTATE AUTUNNO ETC-->
+
+        <div id="movie-spring-summer-fall-winter-spring" class="movie-details">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="../film.html">Film</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Primavera, Estate, Autunno, Inverno... e ancora Primavera</li>
+                </ol>
+            </nav>
+
+            <div class="movie-info" style="display: flex; align-items: flex-start; gap: 20px;">
+                <div class="movie-image" style="flex-shrink: 0;">
+                    <img src="../img/kim-ki-duk-spring-1.jpg" alt="Primavera, Estate, Autunno, Inverno... e ancora Primavera">
+                </div>
+                <div style="flex: 1; text-align: left;">   
+                    <h2>Primavera, Estate, Autunno, Inverno... e ancora Primavera</h2>
+                    <p><strong>Diretto da:</strong> Kim Ki-duk</p>
+                    <p><strong>Data di rilascio:</strong> 19 Settembre 2003</p>
+                    <p><strong>Incassi:</strong> $9.53 milioni</p>
+                    <div class="tasto-indietro">
+                        <button class="btn btn-secondary" onclick="window.location.href='../film.html'">Torna Indietro</button>
+                        <button class="btn btn-outline-danger like-button" onclick="fakeLike()">❤️</button>
+                    </div>
+                    <p><strong>"Primavera, Estate, Autunno, Inverno... e ancora Primavera"</strong> è un film del 2003 diretto da Kim Ki-duk. È un'opera di grande bellezza visiva e profondità spirituale, ambientata in un tempio buddhista galleggiante su un lago in mezzo alle montagne.</p>                            
+                </div>
+            </div> 
+            
+            <div class="movie-plot">
+                <p><h5>Trama:</h5></p>
+                <p>Il film è diviso in cinque capitoli, ognuno dei quali corrisponde a una stagione della vita.</p>
+                <ul>
+                    <li><strong>Primavera:</strong> Un giovane monaco bambino vive con il suo maestro nel tempio galleggiante. Qui impara lezioni di vita e spiritualità, tra cui l'importanza di rispettare tutte le forme di vita.</li>
+                    <li><strong>Estate:</strong> Ormai adolescente, il monaco sperimenta il primo amore quando una giovane ragazza viene al tempio per essere curata. Questo evento segna la sua prima deviazione dal percorso spirituale.</li>
+                    <li><strong>Autunno:</strong> Il monaco, ormai adulto, torna al tempio dopo aver vissuto esperienze dolorose e commesso gravi errori. Affronta il senso di colpa e cerca redenzione attraverso il pentimento.</li>
+                    <li><strong>Inverno:</strong> Ora anziano, il monaco, divenuto maestro, vive da solo nel tempio. Insegna a un nuovo giovane discepolo le stesse lezioni di vita che aveva imparato dal suo maestro.</li>
+                    <li><strong>...e ancora Primavera:</strong> La storia si chiude con un ciclo che si rinnova, suggerendo che la vita e la natura seguono un continuo ciclo di nascita, morte e rinascita.</li>
+                </ul>
+                <p>Il film esplora i temi della crescita spirituale, del ciclo della vita, della natura umana e del karma. Attraverso le stagioni, mostra come il protagonista attraversa l'innocenza, il desiderio, il peccato, la redenzione e infine la saggezza, in un ciclo che si ripete. L'ambiente naturale e la cinematografia minimalista aggiungono una dimensione meditativa all'opera, rendendola un viaggio profondo e contemplativo sulla vita.</p>
+                <p><h5 style="padding-bottom: 20px;">Cast:</h5>
+                    <ul>
+                        <li><strong>Oh Yeong-su</strong> interpreta il Monaco anziano</li>
+                        <li><strong>Kim Ki-duk</strong> interpreta il Monaco adulto</li>
+                        <li><strong>Kim Young-min</strong> interpreta il Monaco giovane</li>
+                        <li><strong>Seo Jae-kyung</strong> interpreta la Donna</li>
+                        <li><strong>Ha Yeo-jin</strong> interpreta la Madre del bambino</li>
+                        <li><strong>Kim Jong-ho</strong> interpreta il Monaco bambino</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <!--SEZIONE COMMENTI-->
+        <div class="comments-section">
+            <h3>Commenti</h3>
+            <!-- Commenti esistenti qui -->
+            <div id="new-comments"></div>
+            <form class="comment-form" onsubmit="addComment(event)">
+                <label for="username">Nome:</label>
+                <input type="text" id="username" required>
+                <label for="comment-text">Commento:</label>
+                <textarea id="comment-text" rows="3" required></textarea>
+                <button type="submit" class="btn btn-primary mt-2">Posta Commento</button>
+            </form>
+        </div>
+        
+    </main>
+
+    <footer class="bg-dark text-white text-center py-2" style="display: block;">
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="../js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
