@@ -30,7 +30,16 @@
                     <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="film.html">Film</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="autori.html">Autori</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="profilo.html">Profilo</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="profiloDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profilo
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="profiloDropdown">
+                            <a class="dropdown-item" href="profilo.html">Profilo Principale</a>
+                            <a class="dropdown-item" href="impostazioni.html">Impostazioni</a>
+                            <a class="dropdown-item" href="logout.html">Logout</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
             <form class="form-inline" onsubmit="return searchCatalog()">
