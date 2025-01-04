@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive My Car</title>
+    
+    <!--METADATA DEL DUBLIN CORE-->
+    <meta name="DC.Title" content="K-Art House Cinema">
+    <meta name="DC.Creator" content="Kelvin Kola">
+    <meta name="DC.Subject" content="Biblioteca digitale riguardante Film di cinema d'autore">
+    <meta name="DC.Description" content="Questo sito presenta film d'autore e profili di registi.">
+    <meta name="DC.Date" content="06-01-2024">
+    <meta name="DC.Type" content="Testi, Immagini, Video">
+    <meta name="DC.Format" content="text/html">
+    <meta name="DC.Identifier" content="https://kelvinkola.github.io/K-ART-HOUSE-CINEMA/">
+    <meta name="DC.Language" content="it">
+    
+    <link rel="stylesheet" href="../style/stilefilm.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/website-logo2.png" class="logo" alt="Niche Logo">
+            </a>            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../film.html">Film</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../autori.html">Autori</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="profiloDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profilo
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="profiloDropdown">
+                            <a class="dropdown-item" href="../profilo.html">Profilo Principale</a>
+                            <a class="dropdown-item" href="impostazioni.html">Impostazioni</a>
+                            <a class="dropdown-item" href="logout.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <form class="form-inline" onsubmit="return searchCatalog()">
+                <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mt-4" style="padding-bottom: 60px;">
+
+        <!--DRIVE MY CAR-->
+
+        <div id="movie-drive-my-car" class="movie-details">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="../film.html">Film</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Drive My Car</li>
+                </ol>
+            </nav>
+
+            <div class="movie-info" style="display: flex; align-items: flex-start; gap: 20px;">
+                <div class="movie-image" style="flex-shrink: 0;">
+                    <img src="../img/drive-my-car.jpg" alt="Drive My Car">
+                </div>
+                <div style="flex: 1; text-align: left;">   
+                    <h2>Drive My Car</h2>
+                    <p><strong>Diretto da:</strong> Ryusuke Hamaguchi</p>
+                    <p><strong>Data di rilascio:</strong> 20 Agosto 2021</p>
+                    <p><strong>Incassi:</strong> $ 14.6 milioni</p>
+                    <div class="tasto-indietro">
+                        <button class="btn btn-secondary" onclick="window.location.href='../film.html'">Torna Indietro</button>
+                        <button class="btn btn-outline-danger like-button" onclick="fakeLike()">❤️</button>
+                    </div>
+                    <p><strong>"Drive My Car"</strong> è un film del 2021 diretto da Ryusuke Hamaguchi, che esplora temi di perdita, comunicazione e redenzione attraverso un racconto profondo e meditativo.</p>                            
+                </div>
+            </div> 
+            
+            <div class="movie-plot">
+                <p><h5>Trama:</h5></p>
+                <p>Yūsuke Kafuku, un attore e regista teatrale di successo, è ancora segnato dalla morte improvvisa della moglie Oto. Invitato a dirigere una produzione di "Zio Vanja" in un festival teatrale a Hiroshima, Yūsuke si ritrova a confrontarsi con il suo passato e i segreti che la moglie ha lasciato irrisolti. Durante il progetto, è obbligato ad avere un autista, Misaki Watari, una giovane donna silenziosa ma intuitiva. Attraverso le loro conversazioni nel corso dei viaggi, Yūsuke e Misaki sviluppano un legame profondo, aiutandosi a vicenda a elaborare il dolore e a scoprire nuove prospettive sulla vita.</p>
+                <p>Il film è una riflessione poetica sul dolore, sulla complessità delle relazioni umane e sul potere della comunicazione. Con un ritmo deliberato e una narrazione stratificata, Ryusuke Hamaguchi esplora i temi dell'accettazione e della redenzione in modo unico e coinvolgente.</p>    
+                <p><h5 style="padding-bottom: 20px;">Cast:</h5>
+                    <li><strong>Hidetoshi Nishijima:</strong> interpreta Yūsuke Kafuku.</li>
+                    <li><strong>Tōko Miura:</strong> interpreta Misaki Watari.</li>
+                    <li><strong>Masaki Okada:</strong> interpreta Kōji Takatsuki.</li>
+                    <li><strong>Reika Kirishima:</strong> interpreta Oto Kafuku.</li>
+                    <li><strong>Park Yu-rim:</strong> interpreta Lee Yoo-na.</li>
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-2" style="display: block;">
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="../js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

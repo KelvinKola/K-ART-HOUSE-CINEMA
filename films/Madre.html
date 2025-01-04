@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madre</title>
+    
+    <!--METADATA DEL DUBLIN CORE-->
+    <meta name="DC.Title" content="K-Art House Cinema">
+    <meta name="DC.Creator" content="Kelvin Kola">
+    <meta name="DC.Subject" content="Biblioteca digitale riguardante Film di cinema d'autore">
+    <meta name="DC.Description" content="Questo sito presenta film d'autore e profili di registi.">
+    <meta name="DC.Date" content="06-01-2024">
+    <meta name="DC.Type" content="Testi, Immagini, Video">
+    <meta name="DC.Format" content="text/html">
+    <meta name="DC.Identifier" content="https://kelvinkola.github.io/K-ART-HOUSE-CINEMA/">
+    <meta name="DC.Language" content="it">
+    
+    <link rel="stylesheet" href="../style/stilefilm.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/website-logo2.png" class="logo" alt="Niche Logo">
+            </a>            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../film.html">Film</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../autori.html">Autori</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="profiloDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profilo
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="profiloDropdown">
+                            <a class="dropdown-item" href="../profilo.html">Profilo Principale</a>
+                            <a class="dropdown-item" href="impostazioni.html">Impostazioni</a>
+                            <a class="dropdown-item" href="logout.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <form class="form-inline" onsubmit="return searchCatalog()">
+                <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mt-4" style="padding-bottom: 60px;">
+
+        <!--MADRE-->
+
+        <div id="movie-madre" class="movie-details">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="../film.html">Film</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Madre</li>
+                </ol>
+            </nav>
+
+            <div class="movie-info" style="display: flex; align-items: flex-start; gap: 20px;">
+                <div class="movie-image" style="flex-shrink: 0;">
+                    <img src="../img/mader.jpg" alt="Madre">
+                </div>
+                <div style="flex: 1; text-align: left;">   
+                    <h2>Madre</h2>
+                    <p><strong>Diretto da:</strong> Bong Joon-ho</p>
+                    <p><strong>Data di rilascio:</strong> 28 Maggio 2009</p>
+                    <p><strong>Incassi:</strong> $ 17.2 milioni</p>
+                    <div class="tasto-indietro">
+                        <button class="btn btn-secondary" onclick="window.location.href='../film.html'">Torna Indietro</button>
+                        <button class="btn btn-outline-danger like-button" onclick="fakeLike()">❤️</button>
+                    </div>
+                    <p><strong>"Madre"</strong> è un film del 2009 diretto da Bong Joon-ho, che esplora i legami familiari, il sacrificio e la ricerca della verità attraverso un thriller avvincente e psicologico.</p>                            
+                </div>
+            </div> 
+            
+            <div class="movie-plot">
+                <p><h5>Trama:</h5></p>
+                <p>La storia segue una madre determinata a dimostrare l'innocenza del figlio Do-joon, un giovane con disabilità intellettive accusato di un omicidio. Quando le autorità locali chiudono il caso, la madre si imbarca in una disperata indagine personale per scoprire il vero colpevole. Durante il suo viaggio, scopre oscure verità nascoste nella comunità e deve affrontare dilemmi morali mentre cerca di proteggere suo figlio a tutti i costi.</p>
+                <p>"Madre" è un thriller emotivamente carico e ricco di suspense, con una straordinaria interpretazione di Kim Hye-ja, che cattura la forza, la vulnerabilità e l'ossessione di una madre disposta a tutto per il proprio figlio. Bong Joon-ho combina magistralmente elementi di mistero e dramma, offrendo una profonda riflessione sulla giustizia, la colpa e l'amore incondizionato.</p>    
+                <p><h5 style="padding-bottom: 20px;">Cast:</h5>
+                    <li><strong>Kim Hye-ja:</strong> interpreta la Madre.</li>
+                    <li><strong>Won Bin:</strong> interpreta Yoon Do-joon.</li>
+                    <li><strong>Jin Goo:</strong> interpreta Jin-tae.</li>
+                    <li><strong>Yoon Je-moon:</strong> interpreta Je-moon.</li>
+                    <li><strong>Jeon Mi-seon:</strong> interpreta Mi-sun.</li>
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-2" style="display: block;">
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="../js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

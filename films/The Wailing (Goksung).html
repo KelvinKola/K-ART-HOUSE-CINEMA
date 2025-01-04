@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wailing (Goksung)</title>
+    
+    <!--METADATA DEL DUBLIN CORE-->
+    <meta name="DC.Title" content="K-Art House Cinema">
+    <meta name="DC.Creator" content="Kelvin Kola">
+    <meta name="DC.Subject" content="Biblioteca digitale riguardante Film di cinema d'autore">
+    <meta name="DC.Description" content="Questo sito presenta film d'autore e profili di registi.">
+    <meta name="DC.Date" content="06-01-2024">
+    <meta name="DC.Type" content="Testi, Immagini, Video">
+    <meta name="DC.Format" content="text/html">
+    <meta name="DC.Identifier" content="https://kelvinkola.github.io/K-ART-HOUSE-CINEMA/">
+    <meta name="DC.Language" content="it">
+    
+    <link rel="stylesheet" href="../style/stilefilm.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="../index.html" class="logo-link">
+                <img src="../img/website-logo2.png" class="logo" alt="Niche Logo">
+            </a>            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../film.html">Film</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="../autori.html">Autori</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="profiloDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profilo
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="profiloDropdown">
+                            <a class="dropdown-item" href="../profilo.html">Profilo Principale</a>
+                            <a class="dropdown-item" href="impostazioni.html">Impostazioni</a>
+                            <a class="dropdown-item" href="logout.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <form class="form-inline" onsubmit="return searchCatalog()">
+                <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container mt-4" style="padding-bottom: 60px;">
+
+        <!--THE WAILING-->
+
+        <div id="movie-the-wailing" class="movie-details">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="../film.html">Film</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">The Wailing</li>
+                </ol>
+            </nav>
+
+            <div class="movie-info" style="display: flex; align-items: flex-start; gap: 20px;">
+                <div class="movie-image" style="flex-shrink: 0;">
+                    <img src="../img/goksung.jpg" alt="The Wailing (Goksung)">
+                </div>
+                <div style="flex: 1; text-align: left;">   
+                    <h2>The Wailing (Goksung)</h2>
+                    <p><strong>Diretto da:</strong> Na Hong-jin</p>
+                    <p><strong>Data di rilascio:</strong> 12 Maggio 2016</p>
+                    <p><strong>Incassi:</strong> $ 51.3 milioni</p>
+                    <div class="tasto-indietro">
+                        <button class="btn btn-secondary" onclick="window.location.href='../film.html'">Torna Indietro</button>
+                        <button class="btn btn-outline-danger like-button" onclick="fakeLike()">❤️</button>
+                    </div>
+                    <p><strong>"The Wailing (Goksung)"</strong> è un thriller/horror del 2016 diretto da Na Hong-jin, che intreccia elementi soprannaturali con indagini poliziesche, creando un racconto inquietante e avvincente.</p>                            
+                </div>
+            </div> 
+            
+            <div class="movie-plot">
+                <p><h5>Trama:</h5></p>
+                <p>Ambientato nel remoto villaggio di Goksung, il film segue Jong-goo, un poliziotto locale, che si trova a indagare su una serie di omicidi brutali e inspiegabili. Le morti sembrano essere collegate a un misterioso sconosciuto giapponese che vive nei boschi circostanti. Quando la figlia di Jong-goo inizia a manifestare comportamenti inquietanti, il caso diventa personale. Nel disperato tentativo di salvare la sua famiglia, Jong-goo si rivolge a un esorcista, ma le linee tra il bene e il male diventano sempre più sfocate, portando a un climax scioccante e ambiguo.</p>
+                <p>Con una narrazione intricata e un'atmosfera tesa e claustrofobica, "The Wailing" esplora temi di fede, paura e superstizione, offrendo una profonda riflessione sull'ignoto e sul male.</p>    
+                <p><h5 style="padding-bottom: 20px;">Cast:</h5>
+                    <li><strong>Kwak Do-won:</strong> interpreta Jong-goo.</li>
+                    <li><strong>Hwang Jung-min:</strong> interpreta l'esorcista.</li>
+                    <li><strong>Jun Kunimura:</strong> interpreta il misterioso giapponese.</li>
+                    <li><strong>Chun Woo-hee:</strong> interpreta la Donna bianca.</li>
+                    <li><strong>Kim Hwan-hee:</strong> interpreta Hyo-jin.</li>
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-2" style="display: block;">
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="../js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
