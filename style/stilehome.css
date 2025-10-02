@@ -117,15 +117,46 @@ nav ul li a {
 
 /* SLIDER IMMAGINI*/
 
+/* — IMMAGINI CAROSELLO: ridimensionamento fluido senza deformazioni — */
 .carousel-inner img {
-    display: block;
-    margin: 0 auto;
-    width: auto;
-    max-height: 500px; /* Controlla l'altezza massima per evitare di deformare l'immagine */
-    object-fit: contain; /* Adatta l'immagine al contenitore senza deformarla */
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;     /* << permette di rimpicciolirsi sotto la larghezza naturale */
+  width: 100%;         /* << riempie la slide in larghezza */
+  height: auto;        /* << mantiene le proporzioni */
+  max-height: 70vh;    /* << non supera il 70% dell’altezza viewport */
+  object-fit: contain; /* << evita tagli (funziona anche senza height fissa perché c’è max-height) */
 }
 
+/* Mobile: lascia un po’ più di spazio verticale */
+@media (max-width: 768px) {
+  .carousel-inner img {
+    max-height: 55vh;
+  }
+}
+
+/* — DIDASCALIE / TESTI: tipografia fluida — */
 .carousel-item p {
-    font-size: 18px;
+  /* da fisso 18px a fluido con limiti sensati */
+  font-size: clamp(0.95rem, 1.4vw + 0.4rem, 1.125rem);
+  line-height: 1.45;
+  margin: 0.25rem 0 0;
+}
+
+.carousel-caption h5 {
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.6rem);
+  line-height: 1.2;
+}
+
+/* un po’ di respiro ai lati delle caption su schermi stretti */
+.carousel-caption {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  word-wrap: break-word;
+}
+
+/* (opzionale) evita che contenuti troppo larghi facciano “saltare” la slide */
+.carousel-item {
+  overflow: hidden;
 }
 
